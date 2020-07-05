@@ -1,0 +1,22 @@
+{
+  "name": "nodemojo",
+  "version": "1.0.0",
+  "description": "Keyboard multiplexer for Linux in NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Biggins",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.14",
+    "iohook": "^0.6.6",
+    "node": "^14.5.0",
+    "robotjs": "^0.6.0"
+  }
+}

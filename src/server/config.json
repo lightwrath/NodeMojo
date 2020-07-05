@@ -1,0 +1,730 @@
+{
+    "teams": {
+        "LightWrath5": {
+            "characters": [
+                "LightWrathYk",
+                "LightWrathKa",
+                "LightWrathKo",
+                "LightWrathNe",
+                "LightWrathVi"
+            ],
+            "clients": [
+                "WoW1",
+                "WoW2",
+                "WoW3",
+                "WoW4",
+                "WoW5"
+            ]
+        }
+    },
+    "clients": {
+        "WoW1": {
+            "executable": "lutris lutris:rungameid/1",
+            "processName": "Wow.exe",
+            "copyClientConfig": [
+                "/home/lightwrath/Documents/NodeMojo/data/Main.wtf",
+                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
+            ],
+            "xPosition": "1080",
+            "yPosition": "0"
+        },
+        "WoW2": {
+            "executable": "lutris lutris:rungameid/2",
+            "processName": "Wow.exe",
+            "copyClientConfig": [
+                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
+                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
+            ],
+            "xPosition": "4920",
+            "yPosition": "120"
+        },
+        "WoW3": {
+            "executable": "lutris lutris:rungameid/3",
+            "processName": "Wow.exe",
+            "copyClientConfig": [
+                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
+                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
+            ],
+            "xPosition": "4920",
+            "yPosition": "760"
+        },
+        "WoW4": {
+            "executable": "lutris lutris:rungameid/4",
+            "processName": "Wow.exe",
+            "copyClientConfig": [
+                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
+                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
+            ],
+            "xPosition": "4920",
+            "yPosition": "1400"
+        },
+        "WoW5": {
+            "executable": "lutris lutris:rungameid/5",
+            "processName": "Wow.exe",
+            "copyClientConfig": [
+                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
+                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
+            ],
+            "xPosition": "0",
+            "yPosition": "120"
+        }
+    },
+    "characters": {
+        "LightWrathYk": {
+            "hotKeys": {
+                "moonfireST": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "4805",
+                            "yPosition": "745"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "mangleThrashSwipeST": {
+                    "triggers": {
+                        "key": "w"
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F3",
+                            "F4",
+                            "F6"
+                        ]
+                    }
+                },
+                "moonfireMT": {
+                    "triggers": {
+                        "key": "e",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "4805",
+                            "yPosition": "745"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "mangleThrashSwipeMT": {
+                    "triggers": {
+                        "key": "e"
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F4",
+                            "F6"
+                        ]
+                    }
+                }
+            }
+        },
+        "LightWrathKa": {
+            "hotKeys": {
+                "trueshot": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "320"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "arcaneShot": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "350"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F2"
+                        ]
+                    }
+                },
+                "aimShot": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "410"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4"
+                        ]
+                    }
+                },
+                "rapidFireSteadyShot": {
+                    "triggers": {
+                        "key": "w"
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F6"
+                        ]
+                    }
+                },
+                "multishotMT": {
+                    "triggers": {
+                        "key": "e",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "380"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3"
+                        ]
+                    }
+                },
+                "aimedShotMT": {
+                    "triggers": {
+                        "key": "e",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "410"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4"
+                        ]
+                    }
+                },
+                "MultishotRapidShotMT": {
+                    "triggers": {
+                        "key": "e"
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F5"
+                        ]
+                    }
+                }
+            }
+        },
+        "LightWrathKo": {
+            "hotKeys": {
+                "flameShotST": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "970"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "instantCastsST": {
+                    "triggers": {
+                        "key": "w"
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F3",
+                            "F4",
+                            "F5",
+                            "F6"
+                        ]
+                    }
+                },
+                "flameShotMT": {
+                    "triggers": {
+                        "key": "e",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "970"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "instantCastMT": {
+                    "triggers": {
+                        "key": "e"
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F3",
+                            "F4",
+                            "F5",
+                            "F7"
+                        ]
+                    }
+                }
+            }
+        },
+        "LightWrathNe": {
+            "hotKeys": {
+                "evocation": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5945",
+                            "yPosition": "1600"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1"
+                        ]
+                    }
+                },
+                "arcameBarrageST": {
+                    "triggers": {
+                        "key": "w",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "1660"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3"
+                        ]
+                    }
+                },
+                "arcaneBlastST": {
+                    "triggers": {
+                        "key": "w"
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F4"
+                        ]
+                    }
+                },
+                "arcaneBarrageMT": {
+                    "triggers": {
+                        "key": "e",
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "5950",
+                            "yPosition": "1660"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3"
+                        ]
+                    }
+                },
+                "arcaneBlastMT": {
+                    "triggers": {
+                        "key": "e"
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F4"
+                        ]
+                    }
+                }
+            }
+        },
+        "LightWrathVi": {
+            "hotKeys": {
+                "viBeaconOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "915",
+                            "yPosition": "655"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "1"
+                        ]
+                    }
+                },
+                "viLightOfDawn": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "625"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F11"
+                        ]
+                    }
+                },
+                "holyPrism": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "655"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F12"
+                        ]
+                    }
+                },
+                "ykHolyShock": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "910",
+                            "yPosition": "475"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "F6"
+                        ]
+                    }
+                },
+                "kaHolyShock": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "940",
+                            "yPosition": "475"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F6"
+                        ]
+                    }
+                },
+                "koHolyShock": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "475"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F6"
+                        ]
+                    }
+                },
+                "neHolyShock": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1000",
+                            "yPosition": "475"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4",
+                            "F6"
+                        ]
+                    }
+                },
+                "viHolyShock": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "475"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F6"
+                        ]
+                    }
+                },
+                "ykCleanse": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "915",
+                            "yPosition": "595"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "F10"
+                        ]
+                    }
+                },
+                "kaCleanse": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "945",
+                            "yPosition": "595"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F10"
+                        ]
+                    }
+                },
+                "koCleanse": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "975",
+                            "yPosition": "595"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F10"
+                        ]
+                    }
+                },
+                "neCleanse": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1005",
+                            "yPosition": "595"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4",
+                            "F10"
+                        ]
+                    }
+                },
+                "viCleanse": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1035",
+                            "yPosition": "595"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F10"
+                        ]
+                    }
+                },
+                "ykFlashOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "910",
+                            "yPosition": "565"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "F9"
+                        ]
+                    }
+                },
+                "kaFlashOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "940",
+                            "yPosition": "565"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F9"
+                        ]
+                    }
+                },
+                "koFlashOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "565"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F9"
+                        ]
+                    }
+                },
+                "NeFlashOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1000",
+                            "yPosition": "565"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4",
+                            "F9"
+                        ]
+                    }
+                },
+                "viFlashOfLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "565"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F9"
+                        ]
+                    }
+                },
+                "ykBestowFaith": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "505"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "F7"
+                        ]
+                    }
+                },
+                "ykHolyLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "910",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F1",
+                            "F8"
+                        ]
+                    }
+                },
+                "kaHolyLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "940",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F2",
+                            "F8"
+                        ]
+                    }
+                },
+                "koHolyLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F3",
+                            "F8"
+                        ]
+                    }
+                },
+                "neHolyLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1000",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F4",
+                            "F8"
+                        ]
+                    }
+                },
+                "viHolyLight": {
+                    "triggers": {
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "1030",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "key": [
+                            "F5",
+                            "F8"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
