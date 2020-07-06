@@ -40,7 +40,6 @@ function keyboardMonitor(eventHub) {
                         hotkey: hotKeyName
                     }
                     eventHub.emit('trigger', eventData);
-                    console.log(eventData)
                 }
             }
         }
@@ -57,7 +56,6 @@ function keyboardMonitor(eventHub) {
                         hotkey: hotKeyName
                     }
                     eventHub.emit('trigger', eventData);
-                    console.log(eventData)
                 }
             }
         }

@@ -37,7 +37,6 @@ async function sendPixelEvents(eventHub) {
                     hotkey: hotKeyName
                 }
                 eventHub.emit('trigger', eventData);
-                console.log(eventData)
             }
         }
     }
