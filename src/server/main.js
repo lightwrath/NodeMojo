@@ -5,6 +5,7 @@ import ioHook from 'iohook';
 import triggerKeys from './triggerKeys';
 import triggerPixels from './triggerPixels.js'
 import triggerManager from './triggerManager.js';
+import eventManager from './eventManager.js';
 import targetClients from './targetClients.js';
 import config from './config.json';
 
@@ -34,7 +35,9 @@ function init() {
     }
 }
 const eventHub = new EventEmitter();
-//init();
+init();
+console.log(team)
 triggerPixels(team, config.characters, eventHub)
 triggerKeys(team, config.characters, eventHub)
 triggerManager(team, config.characters, eventHub)
+eventManager(team, config.characters, eventHub)

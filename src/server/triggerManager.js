@@ -3,8 +3,9 @@
 let triggerState = {}
 
 function initTriggerState(team, characters) {
-    function addToTriggerState (hotKeyName, triggers) {
+    function addToTriggerState (characterName, hotKeyName, triggers) {
         triggerState[hotKeyName] = {}
+        triggerState[hotKeyName].character = characterName;
         triggerState[hotKeyName].combinedState = false;
         if (triggers.key) {
             triggerState[hotKeyName].key = false;
@@ -17,26 +18,37 @@ function initTriggerState(team, characters) {
         for (let hotKeyName in characters[character].hotKeys) {
             let hotKey = characters[character].hotKeys[hotKeyName]
             if (hotKey.triggers) {
-                addToTriggerState(hotKeyName, hotKey.triggers)
+                addToTriggerState(character, hotKeyName, hotKey.triggers)
             }
         }
     }
 }
 
 function triggerMonitor(eventHub) {
-    eventHub.on('trigger', eventData => {
-        let triggerEntry = triggerState[eventData.hotkey];
-        triggerEntry[eventData.triggerType] = eventData.state
+    eventHub.on('trigger', triggerData => {
+        let triggerEntry = triggerState[triggerData.hotkey];
+        triggerEntry[triggerData.triggerType] = triggerData.state
         if ((typeof(triggerEntry.key) === "undefined" ||
             triggerEntry.key === true) &&
             (typeof(triggerEntry.pixel) === "undefined" ||
             triggerEntry.pixel === true)) {
                 triggerEntry.combinedState = true;
-                console.log("PASS EVENT" + eventData)//EVENT HERE
+                //console.log(triggerData)
+                let eventData = {
+                    character: triggerEntry.character,
+                    hotkey: triggerData.hotkey,
+                    active: true
+                }
+                eventHub.emit('event', eventData);
         }
         else {
             if (triggerEntry.combinedState === true) {
-                console.log("FAIL EVENT" + eventData)//EVENT HERE
+                let eventData = {
+                    character: triggerEntry.character,
+                    hotkey: triggerData.hotkey,
+                    active: false
+                }
+                eventHub.emit('event', eventData);
             }
         }
     })

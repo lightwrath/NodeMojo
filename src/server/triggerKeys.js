@@ -34,12 +34,12 @@ function keyboardMonitor(eventHub) {
             if (keyState[keyIndex].state === false) {
                 keyState[keyIndex].state = true;
                 for (let hotKeyName of keyState[keyIndex].hotKey) {
-                    let eventData = {
+                    let triggerData = {
                         triggerType: "key",
                         state: true,
                         hotkey: hotKeyName
                     }
-                    eventHub.emit('trigger', eventData);
+                    eventHub.emit('trigger', triggerData);
                 }
             }
         }
@@ -50,12 +50,12 @@ function keyboardMonitor(eventHub) {
             if (keyState[keyIndex].state === true) {
                 keyState[keyIndex].state = false;
                 for (let hotKeyName of keyState[keyIndex].hotKey) {
-                    let eventData = {
+                    let triggerData = {
                         triggerType: "key",
                         state: false,
                         hotkey: hotKeyName
                     }
-                    eventHub.emit('trigger', eventData);
+                    eventHub.emit('trigger', triggerData);
                 }
             }
         }

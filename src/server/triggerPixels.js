@@ -31,12 +31,12 @@ async function sendPixelEvents(eventHub) {
         if(displayPixelState !== pixelState[pixelName].state) {
             pixelState[pixelName].state = displayPixelState;
             for (let hotKeyName of pixelState[pixelName].hotKey) {
-                let eventData = {
+                let triggerData = {
                     triggerType: "pixel",
                     state: displayPixelState,
                     hotkey: hotKeyName
                 }
-                eventHub.emit('trigger', eventData);
+                eventHub.emit('trigger', triggerData);
             }
         }
     }
