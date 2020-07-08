@@ -5,9 +5,11 @@ import ioHook from 'iohook';
 import triggerKeys from './triggerKeys';
 import triggerPixels from './triggerPixels.js'
 import triggerManager from './triggerManager.js';
-import eventManager from './eventManager.js';
 import targetClients from './targetClients.js';
+import keyboardBroadcaster from './keyboardBroadcaster.js'
+import toggler from './toggler.js'
 import config from './config.json';
+import keyboardcaster from './keyboardBroadcaster';
 
 
 let team = config.teams.LightWrath5
@@ -40,4 +42,5 @@ console.log(team)
 triggerPixels(team, config.characters, eventHub)
 triggerKeys(team, config.characters, eventHub)
 triggerManager(team, config.characters, eventHub)
-eventManager(team, config.characters, eventHub)
+keyboardBroadcaster(team, eventHub)
+toggler(eventHub)

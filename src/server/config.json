@@ -72,6 +72,27 @@
     "characters": {
         "LightWrathYk": {
             "hotKeys": {
+                "IWT": {
+                    "triggers": {
+                        "key": "4"
+                    },
+                    "events": {
+                        "key": [
+                            "4",
+                            "t"
+                        ]
+                    }
+                },
+                "ykMount": {
+                    "triggers": {
+                        "key": "KP_Subtract"
+                    },
+                    "events": {
+                        "key": [
+                            "KP_Subtract"
+                        ]
+                    }
+                },
                 "moonfireST": {
                     "triggers": {
                         "key": "w",
@@ -131,6 +152,77 @@
         },
         "LightWrathKa": {
             "hotKeys": {
+                "kaFollow": {
+                    "triggers": {
+                        "key": "2"
+                    },
+                    "events": {
+                        "key": [
+                            "2"
+                        ]
+                    }
+                },
+                "IWT": {
+                    "triggers": {
+                        "key": "4"
+                    },
+                    "events": {
+                        "key": [
+                            "4",
+                            "t"
+                        ]
+                    }
+                },
+                "moveKaBack": {
+                    "triggers": {
+                        "key": "End"
+                    },
+                    "events": {
+                        "key": [
+                            "Down"
+                        ]
+                    }
+                },
+                "moveKaLeft": {
+                    "triggers": {
+                        "key": "Delete"
+                    },
+                    "events": {
+                        "key": [
+                            "Left"
+                        ]
+                    }
+                },
+                "moveKaRight": {
+                    "triggers": {
+                        "key": "Page_Down"
+                    },
+                    "events": {
+                        "key": [
+                            "Right"
+                        ]
+                    }
+                },
+                "jump": {
+                    "triggers": {
+                        "key": "space"
+                    },
+                    "events": {
+                        "key": [
+                            "space"
+                        ]
+                    }
+                },
+                "kaMount": {
+                    "triggers": {
+                        "key": "KP_Subtract"
+                    },
+                    "events": {
+                        "key": [
+                            "KP_Subtract"
+                        ]
+                    }
+                },
                 "trueshot": {
                     "triggers": {
                         "key": "w",
@@ -182,8 +274,8 @@
                     },
                     "events": {
                         "key": [
-                            "5",
-                            "6"
+                            "F5",
+                            "F6"
                         ]
                     }
                 },
@@ -232,6 +324,77 @@
         },
         "LightWrathKo": {
             "hotKeys": {
+                "koFollow": {
+                    "triggers": {
+                        "key": "2"
+                    },
+                    "events": {
+                        "key": [
+                            "2"
+                        ]
+                    }
+                },
+                "IWT": {
+                    "triggers": {
+                        "key": "4"
+                    },
+                    "events": {
+                        "key": [
+                            "4",
+                            "t"
+                        ]
+                    }
+                },
+                "moveKoBack": {
+                    "triggers": {
+                        "key": "End"
+                    },
+                    "events": {
+                        "key": [
+                            "Down"
+                        ]
+                    }
+                },
+                "moveKoLeft": {
+                    "triggers": {
+                        "key": "Delete"
+                    },
+                    "events": {
+                        "key": [
+                            "Left"
+                        ]
+                    }
+                },
+                "moveKoRight": {
+                    "triggers": {
+                        "key": "Page_Down"
+                    },
+                    "events": {
+                        "key": [
+                            "Right"
+                        ]
+                    }
+                },
+                "jump": {
+                    "triggers": {
+                        "key": "space"
+                    },
+                    "events": {
+                        "key": [
+                            "space"
+                        ]
+                    }
+                },
+                "koMount": {
+                    "triggers": {
+                        "key": "KP_Subtract"
+                    },
+                    "events": {
+                        "key": [
+                            "KP_Subtract"
+                        ]
+                    }
+                },
                 "flameShotST": {
                     "triggers": {
                         "key": "w",
@@ -294,6 +457,77 @@
         },
         "LightWrathNe": {
             "hotKeys": {
+                "neFollow": {
+                    "triggers": {
+                        "key": "2"
+                    },
+                    "events": {
+                        "key": [
+                            "2"
+                        ]
+                    }
+                },
+                "IWT": {
+                    "triggers": {
+                        "key": "4"
+                    },
+                    "events": {
+                        "key": [
+                            "4",
+                            "t"
+                        ]
+                    }
+                },
+                "moveNeBack": {
+                    "triggers": {
+                        "key": "End"
+                    },
+                    "events": {
+                        "key": [
+                            "Down"
+                        ]
+                    }
+                },
+                "moveNeLeft": {
+                    "triggers": {
+                        "key": "Delete"
+                    },
+                    "events": {
+                        "key": [
+                            "Left"
+                        ]
+                    }
+                },
+                "moveNeRight": {
+                    "triggers": {
+                        "key": "Page_Down"
+                    },
+                    "events": {
+                        "key": [
+                            "Right"
+                        ]
+                    }
+                },
+                "jump": {
+                    "triggers": {
+                        "key": "space"
+                    },
+                    "events": {
+                        "key": [
+                            "space"
+                        ]
+                    }
+                },
+                "neMount": {
+                    "triggers": {
+                        "key": "KP_Subtract"
+                    },
+                    "events": {
+                        "key": [
+                            "KP_Subtract"
+                        ]
+                    }
+                },
                 "evocation": {
                     "triggers": {
                         "pixel": {
@@ -364,6 +598,77 @@
         },
         "LightWrathVi": {
             "hotKeys": {
+                "viFollow": {
+                    "triggers": {
+                        "key": "2"
+                    },
+                    "events": {
+                        "key": [
+                            "2"
+                        ]
+                    }
+                },
+                "IWT": {
+                    "triggers": {
+                        "key": "4"
+                    },
+                    "events": {
+                        "key": [
+                            "4",
+                            "t"
+                        ]
+                    }
+                },
+                "moveViBack": {
+                    "triggers": {
+                        "key": "End"
+                    },
+                    "events": {
+                        "key": [
+                            "Down"
+                        ]
+                    }
+                },
+                "moveViLeft": {
+                    "triggers": {
+                        "key": "Delete"
+                    },
+                    "events": {
+                        "key": [
+                            "Left"
+                        ]
+                    }
+                },
+                "moveViRight": {
+                    "triggers": {
+                        "key": "Page_Down"
+                    },
+                    "events": {
+                        "key": [
+                            "Right"
+                        ]
+                    }
+                },
+                "jump": {
+                    "triggers": {
+                        "key": "space"
+                    },
+                    "events": {
+                        "key": [
+                            "space"
+                        ]
+                    }
+                },
+                "viMount": {
+                    "triggers": {
+                        "key": "KP_Subtract"
+                    },
+                    "events": {
+                        "key": [
+                            "KP_Subtract"
+                        ]
+                    }
+                },
                 "viBeaconOfLight": {
                     "triggers": {
                         "pixel": {

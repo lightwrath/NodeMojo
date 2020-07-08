@@ -25,7 +25,7 @@ function initTriggerState(team, characters) {
 }
 
 function triggerMonitor(eventHub) {
-    eventHub.on('trigger', triggerData => {
+    eventHub.on('macroTrigger', triggerData => {
         let triggerEntry = triggerState[triggerData.hotkey];
         triggerEntry[triggerData.triggerType] = triggerData.state
         if ((typeof(triggerEntry.key) === "undefined" ||
@@ -39,7 +39,7 @@ function triggerMonitor(eventHub) {
                     hotkey: triggerData.hotkey,
                     active: true
                 }
-                eventHub.emit('event', eventData);
+                eventHub.emit('macroEvent', eventData);
         }
         else {
             if (triggerEntry.combinedState === true) {
@@ -48,7 +48,7 @@ function triggerMonitor(eventHub) {
                     hotkey: triggerData.hotkey,
                     active: false
                 }
-                eventHub.emit('event', eventData);
+                eventHub.emit('macroEvent', eventData);
             }
         }
     })

@@ -36,7 +36,7 @@ async function sendPixelEvents(eventHub) {
                     state: displayPixelState,
                     hotkey: hotKeyName
                 }
-                eventHub.emit('trigger', triggerData);
+                eventHub.emit('macroTrigger', triggerData);
             }
         }
     }
