@@ -162,7 +162,7 @@
                         ]
                     }
                 },
-                "IWT": {
+                "kaIWT": {
                     "triggers": {
                         "key": "4"
                     },
@@ -334,7 +334,7 @@
                         ]
                     }
                 },
-                "IWT": {
+                "koIWT": {
                     "triggers": {
                         "key": "4"
                     },
@@ -467,7 +467,7 @@
                         ]
                     }
                 },
-                "IWT": {
+                "neIWT": {
                     "triggers": {
                         "key": "4"
                     },
@@ -608,7 +608,7 @@
                         ]
                     }
                 },
-                "IWT": {
+                "viIWT": {
                     "triggers": {
                         "key": "4"
                     },
