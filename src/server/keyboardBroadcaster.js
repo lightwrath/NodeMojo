@@ -1,6 +1,6 @@
 'use strict'
 import iohook from 'iohook';
-import { exec, execSync, spawn } from 'child_process';
+import { exec } from 'child_process';
 
 import defineKeys from './defineKeys.json';
 
@@ -33,8 +33,10 @@ export default function keyboardcaster (team, eventHub) {
         if (keyEvent.keycode === 3655) {
             if (keyBoardcaster) {
                 keyBoardcaster = false;
+                console.log("keyboard broadcaster toggled off")
             } else {
                 keyBoardcaster = true;
+                console.log("keyboard broadcaster toggled on")
             }
         }
     })
