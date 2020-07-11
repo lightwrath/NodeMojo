@@ -21,50 +21,30 @@
         "WoW1": {
             "executable": "lutris lutris:rungameid/1",
             "processName": "Wow.exe",
-            "copyClientConfig": [
-                "/home/lightwrath/Documents/NodeMojo/data/Main.wtf",
-                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
-            ],
             "xPosition": "1080",
             "yPosition": "0"
         },
         "WoW2": {
             "executable": "lutris lutris:rungameid/2",
             "processName": "Wow.exe",
-            "copyClientConfig": [
-                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
-                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
-            ],
             "xPosition": "4920",
             "yPosition": "120"
         },
         "WoW3": {
             "executable": "lutris lutris:rungameid/3",
             "processName": "Wow.exe",
-            "copyClientConfig": [
-                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
-                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
-            ],
             "xPosition": "4920",
             "yPosition": "760"
         },
         "WoW4": {
             "executable": "lutris lutris:rungameid/4",
             "processName": "Wow.exe",
-            "copyClientConfig": [
-                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
-                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
-            ],
             "xPosition": "4920",
             "yPosition": "1400"
         },
         "WoW5": {
             "executable": "lutris lutris:rungameid/5",
             "processName": "Wow.exe",
-            "copyClientConfig": [
-                "/home/lightwrath/Documents/NodeMojo/data/Slave.wtf",
-                "/mnt/Data/lutris/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/WTF/Config.wtf"
-            ],
             "xPosition": "0",
             "yPosition": "120"
         }
