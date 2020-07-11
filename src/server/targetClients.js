@@ -9,7 +9,9 @@ function initClients(teamConfig, clientConfig) {
     }
     for (let clientName of teamConfig.clients) {
         PIDs.oldState = PIDs.newState;
-        execSync(`yes | cp -rf "${clientConfig[clientName].copyClientConfig[0]}" "${clientConfig[clientName].copyClientConfig[1]}"`)
+        if (clientConfig[clientName].copyClientConfig) {
+            execSync(`yes | cp -rf "${clientConfig[clientName].copyClientConfig[0]}" "${clientConfig[clientName].copyClientConfig[1]}"`)
+        }        
         exec(clientConfig[clientName].executable);
         while(PIDs.oldState === PIDs.newState) {
             try {
