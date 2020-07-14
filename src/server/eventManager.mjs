@@ -1,7 +1,6 @@
 'use strict'
 import { exec, execSync, spawn } from 'child_process';
 
-import config from './config.json';
 
 let liveAutoKeyEvents = [];
 
@@ -28,13 +27,12 @@ async function keyAutoEvent(keys, windowTarget, hotkey) {
 }
 
 async function eventProcessor(eventData) {
-    let team = config.teams.LightWrath5
-    let characters = config.characters
-    let idIndex = team.characters.indexOf(eventData.character);
-    let windowTarget = team.windowTargets[idIndex];
-    let keys = characters[eventData.character].hotKeys[eventData.hotkey].events.key;
+    const type = eventData.config[eventData.character].hotKeys[eventData.hotkey].type
+    const windowTarget = eventData.config[eventData.character].client.windowID;
+    const keys = eventData.config[eventData.character].hotKeys[eventData.hotkey].events.key;
+    
     console.log(`Event - Character: ${eventData.character}, Hotkey: ${eventData.hotkey}, Key(s): ${keys}, Active: ${eventData.active}`)
-    if (characters[eventData.character].hotKeys[eventData.hotkey].type === "automatic") {
+    if (type === "automatic") {
         if (eventData.active === true) {
             liveAutoKeyEvents.push(eventData.hotkey)
             keyAutoEvent(keys, windowTarget, eventData.hotkey)
@@ -53,16 +51,11 @@ async function eventProcessor(eventData) {
     }
 }
 
-function macrosOn(eventHub) {
+export function macrosOn(eventHub) {
     console.log("Macros toggled on")
     eventHub.on('macroEvent', eventProcessor);
 }
-function macrosOff(eventHub) {
+export function macrosOff(eventHub) {
     console.log("Macros toggled off")
     eventHub.off('macroEvent', eventProcessor);
-}
-
-module.exports = {
-    macrosOn,
-    macrosOff
 }

@@ -52,9 +52,11 @@
     "characters": {
         "LightWrathYk": {
             "hotKeys": {
-                "IWT": {
+                "ykIWT": {
                     "triggers": {
-                        "key": "4"
+                        "key": {
+                            "keyPress": "4"
+                        }
                     },
                     "events": {
                         "key": [
@@ -65,7 +67,9 @@
                 },
                 "ykMount": {
                     "triggers": {
-                        "key": "KP_Subtract"
+                        "key": {
+                            "keyPress": "KP_Subtract"
+                        }
                     },
                     "events": {
                         "key": [
@@ -76,7 +80,10 @@
                 "moonfireST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "4805",
@@ -92,7 +99,10 @@
                 "mangleThrashSwipeST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        }
                     },
                     "events": {
                         "key": [
@@ -106,7 +116,10 @@
                 "moonfireMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "4805",
@@ -122,7 +135,10 @@
                 "mangleThrashSwipeMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        }
                     },
                     "events": {
                         "key": [
@@ -138,7 +154,9 @@
             "hotKeys": {
                 "kaFollow": {
                     "triggers": {
-                        "key": "2"
+                        "key": {
+                            "keyPress": "2"
+                        }
                     },
                     "events": {
                         "key": [
@@ -148,7 +166,9 @@
                 },
                 "kaIWT": {
                     "triggers": {
-                        "key": "4"
+                        "key": {
+                            "keyPress": "4"
+                        }
                     },
                     "events": {
                         "key": [
@@ -159,7 +179,9 @@
                 },
                 "moveKaBack": {
                     "triggers": {
-                        "key": "End"
+                        "key": {
+                            "keyPress": "End"
+                        }
                     },
                     "events": {
                         "key": [
@@ -169,7 +191,9 @@
                 },
                 "moveKaLeft": {
                     "triggers": {
-                        "key": "Delete"
+                        "key": {
+                            "keyPress": "Delete"
+                        }
                     },
                     "events": {
                         "key": [
@@ -179,7 +203,9 @@
                 },
                 "moveKaRight": {
                     "triggers": {
-                        "key": "Page_Down"
+                        "key": {
+                            "keyPress": "Page_Down"
+                        }
                     },
                     "events": {
                         "key": [
@@ -189,7 +215,9 @@
                 },
                 "kaJump": {
                     "triggers": {
-                        "key": "space"
+                        "key": {
+                            "keyPress": "space"
+                        }
                     },
                     "events": {
                         "key": [
@@ -199,7 +227,9 @@
                 },
                 "kaMount": {
                     "triggers": {
-                        "key": "KP_Subtract"
+                        "key": {
+                            "keyPress": "KP_Subtract"
+                        }
                     },
                     "events": {
                         "key": [
@@ -210,7 +240,10 @@
                 "trueshot": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -226,7 +259,10 @@
                 "arcaneShot": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -242,7 +278,10 @@
                 "aimShot": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -258,7 +297,10 @@
                 "rapidFireSteadyShot": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        }
                     },
                     "events": {
                         "key": [
@@ -270,7 +312,10 @@
                 "multishotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -286,7 +331,10 @@
                 "aimedShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -302,7 +350,10 @@
                 "MultishotRapidShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        }
                     },
                     "events": {
                         "key": [
@@ -317,7 +368,9 @@
             "hotKeys": {
                 "koFollow": {
                     "triggers": {
-                        "key": "2"
+                        "key": {
+                            "keyPress": "2"
+                        }
                     },
                     "events": {
                         "key": [
@@ -327,7 +380,9 @@
                 },
                 "koIWT": {
                     "triggers": {
-                        "key": "4"
+                        "key": {
+                            "keyPress": "4"
+                        }
                     },
                     "events": {
                         "key": [
@@ -338,7 +393,9 @@
                 },
                 "moveKoBack": {
                     "triggers": {
-                        "key": "End"
+                        "key": {
+                            "keyPress": "End"
+                        }
                     },
                     "events": {
                         "key": [
@@ -348,7 +405,9 @@
                 },
                 "moveKoLeft": {
                     "triggers": {
-                        "key": "Delete"
+                        "key": {
+                            "keyPress": "Delete"
+                        }
                     },
                     "events": {
                         "key": [
@@ -358,7 +417,9 @@
                 },
                 "moveKoRight": {
                     "triggers": {
-                        "key": "Page_Down"
+                        "key": {
+                            "keyPress": "Page_Down"
+                        }
                     },
                     "events": {
                         "key": [
@@ -368,7 +429,9 @@
                 },
                 "koJump": {
                     "triggers": {
-                        "key": "space"
+                        "key": {
+                            "keyPress": "space"
+                        }
                     },
                     "events": {
                         "key": [
@@ -378,7 +441,9 @@
                 },
                 "koMount": {
                     "triggers": {
-                        "key": "KP_Subtract"
+                        "key": {
+                            "keyPress": "KP_Subtract"
+                        }
                     },
                     "events": {
                         "key": [
@@ -389,7 +454,10 @@
                 "flameShotST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -405,7 +473,10 @@
                 "instantCastsST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        }
                     },
                     "events": {
                         "key": [
@@ -420,7 +491,10 @@
                 "flameShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -436,7 +510,10 @@
                 "instantCastMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        }
                     },
                     "events": {
                         "key": [
@@ -454,7 +531,9 @@
             "hotKeys": {
                 "neFollow": {
                     "triggers": {
-                        "key": "2"
+                        "key": {
+                            "keyPress": "2"
+                        }
                     },
                     "events": {
                         "key": [
@@ -464,7 +543,9 @@
                 },
                 "neIWT": {
                     "triggers": {
-                        "key": "4"
+                        "key": {
+                            "keyPress": "4"
+                        }
                     },
                     "events": {
                         "key": [
@@ -475,7 +556,9 @@
                 },
                 "moveNeBack": {
                     "triggers": {
-                        "key": "End"
+                        "key": {
+                            "keyPress": "End"
+                        }
                     },
                     "events": {
                         "key": [
@@ -485,7 +568,9 @@
                 },
                 "moveNeLeft": {
                     "triggers": {
-                        "key": "Delete"
+                        "key": {
+                            "keyPress": "Delete"
+                        }
                     },
                     "events": {
                         "key": [
@@ -495,7 +580,9 @@
                 },
                 "moveNeRight": {
                     "triggers": {
-                        "key": "Page_Down"
+                        "key": {
+                            "keyPress": "Page_Down"
+                        }
                     },
                     "events": {
                         "key": [
@@ -505,7 +592,9 @@
                 },
                 "neJump": {
                     "triggers": {
-                        "key": "space"
+                        "key": {
+                            "keyPress": "space"
+                        }
                     },
                     "events": {
                         "key": [
@@ -515,7 +604,9 @@
                 },
                 "neMount": {
                     "triggers": {
-                        "key": "KP_Subtract"
+                        "key": {
+                            "keyPress": "KP_Subtract"
+                        }
                     },
                     "events": {
                         "key": [
@@ -526,6 +617,7 @@
                 "evocation": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5945",
@@ -541,7 +633,10 @@
                 "arcameBarrageST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -557,7 +652,10 @@
                 "arcaneBlastST": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "w"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "w"
+                        }
                     },
                     "events": {
                         "key": [
@@ -569,7 +667,10 @@
                 "arcaneBarrageMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e",
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        },
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5950",
@@ -585,7 +686,10 @@
                 "arcaneBlastMT": {
                     "type": "automatic",
                     "triggers": {
-                        "key": "e"
+                        "resetOnTrigger": true,
+                        "key": {
+                            "keyPress": "e"
+                        }
                     },
                     "events": {
                         "key": [
@@ -600,7 +704,9 @@
             "hotKeys": {
                 "viFollow": {
                     "triggers": {
-                        "key": "2"
+                        "key": {
+                            "keyPress": "2"
+                        }
                     },
                     "events": {
                         "key": [
@@ -610,7 +716,9 @@
                 },
                 "viIWT": {
                     "triggers": {
-                        "key": "4"
+                        "key": {
+                            "keyPress": "4"
+                        }
                     },
                     "events": {
                         "key": [
@@ -621,7 +729,9 @@
                 },
                 "moveViBack": {
                     "triggers": {
-                        "key": "End"
+                        "key": {
+                            "keyPress": "End"
+                        }
                     },
                     "events": {
                         "key": [
@@ -631,7 +741,9 @@
                 },
                 "moveViLeft": {
                     "triggers": {
-                        "key": "Delete"
+                        "key": {
+                            "keyPress": "Delete"
+                        }
                     },
                     "events": {
                         "key": [
@@ -641,7 +753,9 @@
                 },
                 "moveViRight": {
                     "triggers": {
-                        "key": "Page_Down"
+                        "key": {
+                            "keyPress": "Page_Down"
+                        }
                     },
                     "events": {
                         "key": [
@@ -651,7 +765,9 @@
                 },
                 "viJump": {
                     "triggers": {
-                        "key": "space"
+                        "key": {
+                            "keyPress": "space"
+                        }
                     },
                     "events": {
                         "key": [
@@ -661,7 +777,9 @@
                 },
                 "viMount": {
                     "triggers": {
-                        "key": "KP_Subtract"
+                        "key": {
+                            "keyPress": "KP_Subtract"
+                        }
                     },
                     "events": {
                         "key": [
@@ -688,6 +806,7 @@
                 "viLightOfDawn": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -704,6 +823,7 @@
                 "holyPrism": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -720,6 +840,7 @@
                 "ykHolyShock": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -736,6 +857,7 @@
                 "kaHolyShock": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -752,6 +874,7 @@
                 "koHolyShock": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -768,6 +891,7 @@
                 "neHolyShock": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -784,6 +908,7 @@
                 "viHolyShock": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -800,6 +925,7 @@
                 "ykCleanse": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "915",
@@ -816,6 +942,7 @@
                 "kaCleanse": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "945",
@@ -832,6 +959,7 @@
                 "koCleanse": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "975",
@@ -848,6 +976,7 @@
                 "neCleanse": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1005",
@@ -864,6 +993,7 @@
                 "viCleanse": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1035",
@@ -880,6 +1010,7 @@
                 "ykFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -896,6 +1027,7 @@
                 "kaFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -912,6 +1044,7 @@
                 "koFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -928,6 +1061,7 @@
                 "NeFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -944,6 +1078,7 @@
                 "viFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -960,6 +1095,7 @@
                 "ykBestowFaith": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -976,6 +1112,7 @@
                 "ykHolyLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -992,6 +1129,7 @@
                 "kaHolyLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -1008,6 +1146,7 @@
                 "koHolyLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -1024,6 +1163,7 @@
                 "neHolyLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -1040,6 +1180,7 @@
                 "viHolyLight": {
                     "type": "automatic",
                     "triggers": {
+                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",

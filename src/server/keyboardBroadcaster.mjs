@@ -20,13 +20,14 @@ function convertKeyEvent(keyEvent) {
     return keyString.join('+')
 }
 
-export default function keyboardcaster (team, eventHub) {
+export default function keyboardcaster (eventHub) {
     let keyBoardcaster = false
     iohook.on('keydown', function(keyEvent) {
         if (keyBoardcaster) {
             const keyString = convertKeyEvent(keyEvent);
             console.log("Broadcast keys: " + keyString)
-            for (const window of team.windowTargets) {
+            for (const characterName in appConfig) {
+                let window = appConfig[characterName].client.windowID
                 exec(`xdotool keydown --window ${window} ${keyString}`)
             }
         }
@@ -43,7 +44,8 @@ export default function keyboardcaster (team, eventHub) {
     iohook.on('keyup', function(keyEvent) {
         if (keyBoardcaster) {
             const keyString = convertKeyEvent(keyEvent);
-            for (const window of team.windowTargets) {
+            for (const characterName in appConfig) {
+                let window = appConfig[characterName].client.windowID
                 exec(`xdotool keyup --window ${window} ${keyString}`)
             }
         }
