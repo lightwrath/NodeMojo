@@ -1,76 +1,62 @@
 'use strict' 
 
-async function enableEvents(eventHub) {
-    for (const characterName in appConfig) {
-        for (const hotkeyName in appConfig[characterName].hotKeys) {
-            let hotkey = appConfig[characterName].hotKeys[hotkeyName]
-            if(hotkey.triggers.resetOnTrigger) {
-                if (hotkey.triggers.active && !hotkey.events.active) {
-                    let eventData = {
-                        config: appConfig,
-                        character: characterName,
-                        hotkey: hotkeyName,
-                        active: hotkey.triggers.active
-                    }
-                    eventHub.emit('macroEvent', eventData);
-                    hotkey.events.active = hotkey.triggers.active;
-                    break;
-                }
-            } else {
-                if (hotkey.triggers.active && !hotkey.events.active) {
-                    let eventData = {
-                        config: appConfig,
-                        character: characterName,
-                        hotkey: hotkeyName,
-                        active: hotkey.triggers.active
-                    }
-                    eventHub.emit('macroEvent', eventData);
-                    hotkey.events.active = hotkey.triggers.active;
-                }
-            }
-        }
-    }
-}
-
-async function disableEvents(eventHub) {
-    for (const characterName in appConfig) {
-        for (const hotkeyName in appConfig[characterName].hotKeys) {
-            let hotkey = appConfig[characterName].hotKeys[hotkeyName]
-            if (!hotkey.triggers.active && hotkey.events.active) {
-                let eventData = {
+function instantTriggerProcessor(eventHub) {
+    eventHub.on('trigger', function(triggerData) {
+        let hotkey = appConfig[triggerData.character].hotKeys[triggerData.hotkey];
+        if ((!hotkey.triggers.key || hotkey.triggers.key.active) && (!hotkey.triggers.pixel || hotkey.triggers.pixel.active)) {
+            hotkey.triggers.active = true;
+            if (hotkey.type !== "automatic" && hotkey.triggers.active && !hotkey.events.active) {
+                eventHub.emit('macroEvent', {
                     config: appConfig,
-                    character: characterName,
-                    hotkey: hotkeyName,
-                    active: hotkey.triggers.active
+                    character: triggerData.character,
+                    hotkey: triggerData.hotkey,
+                    active: true
+                });
+                hotkey.events.active = true;
+            }
+        } else {
+            if (hotkey.triggers.active === true) {
+                hotkey.triggers.active = false;
+                if (hotkey.type !== "automatic" && !hotkey.triggers.active && hotkey.events.active) {
+                    eventHub.emit('macroEvent', {
+                        config: appConfig,
+                        character: triggerData.character,
+                        hotkey: triggerData.hotkey,
+                        active: false
+                    });
+                    hotkey.events.active = false;
                 }
-                eventHub.emit('macroEvent', eventData);
-                hotkey.events.active = false;
             }
         }
-    }
+    });
 }
 
-async function updateTriggers() {
-    for (const characterName in appConfig) {
-        for (const hotkeyName in appConfig[characterName].hotKeys) {
-            let triggers = appConfig[characterName].hotKeys[hotkeyName].triggers
-            if ((!triggers.key || triggers.key.active) && (!triggers.pixel || triggers.pixel.active)) {
-                triggers.active = true
-            } else {
-                if (triggers.active === true) {
-                    triggers.active = false;
+async function autoEventsManager(eventHub) {
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+    while (true) {
+        for (const characterName in appConfig) {
+            for (const hotkeyName in appConfig[characterName].hotKeys) {
+                let hotkey = appConfig[characterName].hotKeys[hotkeyName];
+                if(hotkey.type === "automatic" && hotkey.triggers.active) {
+                    let eventData = {
+                        config: appConfig,
+                        character: characterName,
+                        hotkey: hotkeyName,
+                        active: true
+                    }
+                    eventHub.emit('macroEvent', eventData);
+                    hotkey.events.active = true;
+                    break;
+                } else if (hotkey.type === "automatic" && !hotkey.triggers.active) {
+                    hotkey.events.active = false;
                 }
             }
         }
+        await sleep(Math.floor(Math.random() * (Math.floor(300) - Math.ceil(200))) + Math.ceil(200));
     }
 }
 
 export default async function main(eventHub) {
-    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-    while (true) {
-        await updateTriggers();
-        enableEvents(eventHub);
-        disableEvents(eventHub);
-        await sleep(100);
-    }
+    instantTriggerProcessor(eventHub);
+    autoEventsManager(eventHub);
 }

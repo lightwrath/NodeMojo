@@ -1,5 +1,13 @@
 {
     "teams": {
+        "onlyLightWrathYk": {
+            "characters": [
+                "LightWrathYk"
+            ],
+            "clients": [
+                "WoW1"
+            ]
+        },
         "LightWrath5": {
             "characters": [
                 "LightWrathYk",
@@ -80,7 +88,6 @@
                 "moonfireST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -99,7 +106,6 @@
                 "mangleThrashSwipeST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         }
@@ -116,7 +122,6 @@
                 "moonfireMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         },
@@ -135,7 +140,6 @@
                 "mangleThrashSwipeMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         }
@@ -240,7 +244,6 @@
                 "trueshot": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -259,7 +262,6 @@
                 "arcaneShot": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -278,7 +280,6 @@
                 "aimShot": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -297,7 +298,6 @@
                 "rapidFireSteadyShot": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         }
@@ -312,7 +312,6 @@
                 "multishotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         },
@@ -331,7 +330,6 @@
                 "aimedShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         },
@@ -350,7 +348,6 @@
                 "MultishotRapidShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         }
@@ -454,7 +451,6 @@
                 "flameShotST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -473,7 +469,6 @@
                 "instantCastsST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         }
@@ -491,7 +486,6 @@
                 "flameShotMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         },
@@ -510,7 +504,6 @@
                 "instantCastMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         }
@@ -617,7 +610,6 @@
                 "evocation": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "5945",
@@ -633,7 +625,6 @@
                 "arcameBarrageST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         },
@@ -652,7 +643,6 @@
                 "arcaneBlastST": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "w"
                         }
@@ -667,7 +657,6 @@
                 "arcaneBarrageMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         },
@@ -686,7 +675,6 @@
                 "arcaneBlastMT": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "key": {
                             "keyPress": "e"
                         }
@@ -806,7 +794,6 @@
                 "viLightOfDawn": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -823,7 +810,6 @@
                 "holyPrism": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -840,7 +826,6 @@
                 "ykHolyShock": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -857,7 +842,6 @@
                 "kaHolyShock": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -874,7 +858,6 @@
                 "koHolyShock": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -891,7 +874,6 @@
                 "neHolyShock": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -908,7 +890,6 @@
                 "viHolyShock": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -925,7 +906,6 @@
                 "ykCleanse": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "915",
@@ -942,7 +922,6 @@
                 "kaCleanse": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "945",
@@ -959,7 +938,6 @@
                 "koCleanse": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "975",
@@ -976,7 +954,6 @@
                 "neCleanse": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1005",
@@ -993,7 +970,6 @@
                 "viCleanse": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1035",
@@ -1010,7 +986,6 @@
                 "ykFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -1027,7 +1002,6 @@
                 "kaFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -1044,7 +1018,6 @@
                 "koFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -1061,7 +1034,6 @@
                 "NeFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -1078,7 +1050,6 @@
                 "viFlashOfLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -1095,7 +1066,6 @@
                 "ykBestowFaith": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",
@@ -1112,7 +1082,6 @@
                 "ykHolyLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "910",
@@ -1129,7 +1098,6 @@
                 "kaHolyLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "940",
@@ -1146,7 +1114,6 @@
                 "koHolyLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "970",
@@ -1163,7 +1130,6 @@
                 "neHolyLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1000",
@@ -1180,7 +1146,6 @@
                 "viHolyLight": {
                     "type": "automatic",
                     "triggers": {
-                        "resetOnTrigger": true,
                         "pixel": {
                             "colour": "00ff00",
                             "xPosition": "1030",

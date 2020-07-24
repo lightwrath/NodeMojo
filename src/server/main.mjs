@@ -5,6 +5,7 @@ import ioHook from 'iohook';
 import triggerKeys from './triggerKeys.mjs';
 import triggerPixels from './triggerPixels.mjs'
 import triggerManager from './triggerManager.mjs';
+import { initEvents } from './eventManager.mjs';
 import { initClients, positionClients } from './targetClients.mjs';
 import keyboardBroadcaster from './keyboardBroadcaster.mjs'
 import toggler from './toggler.mjs'
@@ -65,8 +66,9 @@ const eventHub = new EventEmitter();
 global.appConfig = generateAppConfig(team, config.clients, config.characters);
 init(appConfig);
 console.info(JSON.stringify(appConfig, null, 4));
-triggerPixels()
-triggerKeys()
-triggerManager(eventHub)
-keyboardBroadcaster(eventHub)
-toggler(eventHub)
+triggerPixels(eventHub);
+triggerKeys(eventHub);
+triggerManager(eventHub);
+initEvents();
+keyboardBroadcaster(eventHub);
+toggler(eventHub);
