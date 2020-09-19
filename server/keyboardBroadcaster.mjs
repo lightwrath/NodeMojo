@@ -20,15 +20,14 @@ function convertKeyEvent(keyEvent) {
     return keyString.join('+')
 }
 
-export default function keyboardcaster (eventHub) {
+export default function keyboardcaster (appConfig) {
     let keyBoardcaster = false
     iohook.on('keydown', function(keyEvent) {
         if (keyBoardcaster) {
             const keyString = convertKeyEvent(keyEvent);
             console.log("Broadcast keys: " + keyString)
-            for (const characterName in appConfig) {
-                let window = appConfig[characterName].client.windowID
-                exec(`xdotool keydown --window ${window} ${keyString}`)
+            for (const client of appConfig.config) {
+                exec(`xdotool keydown --window ${client.windowID} ${keyString}`)
             }
         }
         if (keyEvent.keycode === 3655) {
@@ -44,9 +43,8 @@ export default function keyboardcaster (eventHub) {
     iohook.on('keyup', function(keyEvent) {
         if (keyBoardcaster) {
             const keyString = convertKeyEvent(keyEvent);
-            for (const characterName in appConfig) {
-                let window = appConfig[characterName].client.windowID
-                exec(`xdotool keyup --window ${window} ${keyString}`)
+            for (const client of appConfig.config) {
+                exec(`xdotool keyup --window ${client.windowID} ${keyString}`)
             }
         }
     })

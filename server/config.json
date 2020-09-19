@@ -1,0 +1,1045 @@
+{
+    "appConfig": {
+        "activeTeam": "lightWrath5",
+        "toggleKeys": {
+            "broadcaster": "",
+            "macros": ""
+        }
+    },
+    "teams": {
+        "onlyLightWrathYk": {
+            "name": "Only LightWrathYk",
+            "config": [
+                {
+                    "client": "woW1",
+                    "character": "lightWrathYk"
+                }
+            ]
+        },
+        "lightWrath5": {
+            "name": "LightWrath 5",
+            "config": [
+                {
+                    "clientRef": "woW1",
+                    "characterRef": "lightWrathYk"
+                },
+                {
+                    "clientRef": "woW2",
+                    "characterRef": "lightWrathKa"
+                },
+                {
+                    "clientRef": "woW3",
+                    "characterRef": "lightWrathKo"
+                },
+                {
+                    "clientRef": "woW4",
+                    "characterRef": "lightWrathNe"
+                },
+                {
+                    "clientRef": "woW5",
+                    "characterRef": "lightWrathVi"
+                }
+            ]
+        }
+    },
+    "clients": {
+        "woW1": {
+            "name": "WoW1",
+            "executable": "lutris lutris:rungameid/1",
+            "processName": "Wow.exe",
+            "xPosition": "1080",
+            "yPosition": "0"
+        },
+        "woW2": {
+            "name": "WoW2",
+            "executable": "lutris lutris:rungameid/2",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "120"
+        },
+        "woW3": {
+            "name": "WoW3",
+            "executable": "lutris lutris:rungameid/3",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "760"
+        },
+        "woW4": {
+            "name": "WoW4",
+            "executable": "lutris lutris:rungameid/4",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "1400"
+        },
+        "woW5": {
+            "name": "WoW5",
+            "executable": "lutris lutris:rungameid/5",
+            "processName": "Wow.exe",
+            "xPosition": "0",
+            "yPosition": "120"
+        }
+    },
+    "characters": {
+        "lightWrathYk": {
+            "name": "LightWrathYk",
+            "hotkeyRefs": [
+                "interactWithTarget",
+                "moonfireSingleTarget", 
+                "moonfireMultiTarget",
+                "lightWrathYkSingleTarget", 
+                "lightWrathYkMultiTarget"
+            ]
+        },
+        "lightWrathKa": {
+            "name": "LightWrathKa",
+            "hotkeyRefs": [
+                "interactWithTarget", 
+                "mount", 
+                "follow", 
+                "moveBack", 
+                "moveLeft", 
+                "moveRight", 
+                "jump",
+                "trueshot",
+                "arcaneShot",
+                "aimedShot",
+                "lightWrathKaSingleTarget",
+                "multishotMultiTarget",
+                "aimedShotMultiTarget",
+                "lightWrathKaMultiTarget"
+            ]
+        },
+        "lightWrathKo": {
+            "name": "LightWrathKo",
+            "hotkeyRefs": [
+                "interactWithTarget", 
+                "mount", 
+                "follow", 
+                "moveBack", 
+                "moveLeft", 
+                "moveRight", 
+                "jump",
+                "flameShockSingleTarget",
+                "lightWrathKoSingleTarget",
+                "flameShockMultiTarget",
+                "lightWrathKoMultiTarget"
+            ]
+        },
+        "lightWrathNe": {
+            "name": "LightWrathNe",
+            "hotkeyRefs": [
+                "interactWithTarget", 
+                "mount", 
+                "follow", 
+                "moveBack", 
+                "moveLeft", 
+                "moveRight", 
+                "jump",
+                "evocation",
+                "arcaneBarrageSingleTarget",
+                "arcaneBlastSingleTarget",
+                "arcaneBarrageMultiTarget",
+                "arcaneBlastMultiTarget"
+            ]
+        },
+        "lightWrathVi": {
+            "name": "LightWrathVi",
+            "hotkeyRefs": [
+                "interactWithTarget", 
+                "mount", 
+                "follow", 
+                "moveBack", 
+                "moveLeft", 
+                "moveRight", 
+                "jump",
+                "lightWrathViBeaconOfLight",
+                "lightWrathViLightOfDawn",
+                "holyPrism",
+                "lightWrathYkHolyShock",
+                "lightWrathKaHolyShock",
+                "lightWrathKoHolyShock",
+                "lightWrathNeHolyShock",
+                "lightWrathViHolyShock",
+                "lightWrathYkCleanse",
+                "lightWrathKaCleanse",
+                "lightWrathKoCleanse",
+                "lightWrathNeCleanse",
+                "lightWrathViCleanse",
+                "lightWrathYkFlashOfLight",
+                "lightWrathKaFlashOfLight",
+                "lightWrathKoFlashOfLight",
+                "lightWrathNeFlashOfLight",
+                "lightWrathViFlashOfLight",
+                "lightWrathYkBestowFaith",
+                "lightWrathYkHolyLight",
+                "lightWrathKaHolyLight",
+                "lightWrathKoHolyLight",
+                "lightWrathNeHolyLight",
+                "lightWrathViHolyLight"
+            ]
+        }
+    },
+    "hotkeys": {
+        "interactWithTarget": {
+            "name": "Interact With Target",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "4"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "4",
+                    "t"
+                ]
+            }
+        },
+        "mount": {
+            "name": "Mount",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "KP_Subtract"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "KP_Subtract"
+                ]
+            }
+        },
+        "follow": {
+            "name": "Follow",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "2"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "2"
+                ]
+            }
+        },
+        "moveBack": {
+            "name": "Move Back",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "End"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Down"
+                ]
+            }
+        },
+        "moveLeft": {
+            "name": "moveLeft",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "Delete"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Left"
+                ]
+            }
+        },
+        "moveRight": {
+            "name": "moveRight",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "Page_Down"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Right"
+                ]
+            }
+        },
+        "jump": {
+            "name": "Jump",
+            "priority": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "space"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "space"
+                ]
+            }
+        },
+        "moonfireSingleTarget": {
+            "name": "Moonfire Single Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "lightWrathYkSingleTarget": {
+            "name": "LightWrathYk Single Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F3",
+                    "F4",
+                    "F6"
+                ]
+            }
+        },
+        "moonfireMultiTarget": {
+            "name": "Moonfire Multi-Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "lightWrathYkMultiTarget": {
+            "name": "LightWrathYk Multi-Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F4",
+                    "F6"
+                ]
+            }
+        },
+        "trueshot": {
+            "name": "Trueshot",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "320"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "arcaneShot": {
+            "name": "Arcane Shot",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "350"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2"
+                ]
+            }
+        },
+        "aimedShot": {
+            "name": "Aimed Shot",
+            "priority": 3,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "410"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4"
+                ]
+            }
+        },
+        "lightWrathKaSingleTarget": {
+            "name": "LightWrathKa Single Target",
+            "priority": 4,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F6"
+                ]
+            }
+        },
+        "multishotMultiTarget": {
+            "name": "Multishot Multi-Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "380"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3"
+                ]
+            }
+        },
+        "aimedShotMultiTarget": {
+            "name": "Aimed Shot Multi-Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "410"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4"
+                ]
+            }
+        },
+        "lightWrathKaMultiTarget": {
+            "name": "LightWrathKa Multi-Target",
+            "priority": 3,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F5"
+                ]
+            }
+        },
+        "flameShockSingleTarget": {
+            "name": "Flame Shock Single Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "970"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "lightWrathKoSingleTarget": {
+            "name": "LightWrath Single Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F3",
+                    "F4",
+                    "F5",
+                    "F6"
+                ]
+            }
+        },
+        "flameShockMultiTarget": {
+            "name": "Flame Shock Multi-Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "970"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "lightWrathKoMultiTarget": {
+            "name": "LightWrathKo Multi-Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F3",
+                    "F4",
+                    "F5",
+                    "F7"
+                ]
+            }
+        },
+        "evocation": {
+            "name": "Evocation",
+            "priority": 1,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5945",
+                    "yPosition": "1600"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1"
+                ]
+            }
+        },
+        "arcaneBarrageSingleTarget": {
+            "name": "Arcane Barrage Single Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "1660"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3"
+                ]
+            }
+        },
+        "arcaneBlastSingleTarget": {
+            "name": "Arcane Blast Single Target",
+            "priority": 3,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F4"
+                ]
+            }
+        },
+        "arcaneBarrageMultiTarget": {
+            "name": "Arcane Barrage Multi-Target",
+            "priority": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "5950",
+                    "yPosition": "1660"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3"
+                ]
+            }
+        },
+        "arcaneBlastMultiTarget": {
+            "name": "Arcane Blast Multi-Target",
+            "priority": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "e"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F4"
+                ]
+            }
+        },
+        "lightWrathViBeaconOfLight": {
+            "name": "LightWrathVi Beacon Of Light",
+            "priority": 1,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "915",
+                    "yPosition": "655"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "1"
+                ]
+            }
+        },
+        "lightWrathViLightOfDawn": {
+            "name": "LightWrathVi Light Of Dawn",
+            "priority": 1,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "625"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F11"
+                ]
+            }
+        },
+        "holyPrism": {
+            "name":  "Holy Prism",
+            "priority": 1,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "655"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F12"
+                ]
+            }
+        },
+        "lightWrathYkHolyShock": {
+            "name": "LightWrathYk Holy Shock",
+            "priority": 2,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "910",
+                    "yPosition": "475"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "F6"
+                ]
+            }
+        },
+        "lightWrathKaHolyShock": {
+            "name": "LightWrathKa Holy Shock",
+            "priority": 2,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "940",
+                    "yPosition": "475"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F6"
+                ]
+            }
+        },
+        "lightWrathKoHolyShock": {
+            "name": "LightWrathKo Holy Shock",
+            "priority": 2,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "970",
+                    "yPosition": "475"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F6"
+                ]
+            }
+        },
+        "lightWrathNeHolyShock": {
+            "name": "LightWrathNe Holy Shock",
+            "priority": 2,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1000",
+                    "yPosition": "475"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4",
+                    "F6"
+                ]
+            }
+        },
+        "lightWrathViHolyShock": {
+            "name": "LightWrathVi Holy Shock",
+            "priority": 2,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "475"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F6"
+                ]
+            }
+        },
+        "lightWrathYkCleanse": {
+            "name": "LightWrathYk Cleanse",
+            "priority": 3,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "915",
+                    "yPosition": "595"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "F10"
+                ]
+            }
+        },
+        "lightWrathKaCleanse": {
+            "name": "LightWrathKa Cleanse",
+            "priority": 3,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "945",
+                    "yPosition": "595"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F10"
+                ]
+            }
+        },
+        "lightWrathKoCleanse": {
+            "name": "LightWrathKo Cleanse",
+            "priority": 3,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "975",
+                    "yPosition": "595"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F10"
+                ]
+            }
+        },
+        "lightWrathNeCleanse": {
+            "name": "LightWrathNe Cleanse",
+            "priority": 3,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1005",
+                    "yPosition": "595"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4",
+                    "F10"
+                ]
+            }
+        },
+        "lightWrathViCleanse": {
+            "name": "LightWrathVi Cleanse",
+            "priority": 3,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1035",
+                    "yPosition": "595"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F10"
+                ]
+            }
+        },
+        "lightWrathYkFlashOfLight": {
+            "name": "LightWrathYk Flash Of Light",
+            "priority": 4,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "910",
+                    "yPosition": "565"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "F9"
+                ]
+            }
+        },
+        "lightWrathKaFlashOfLight": {
+            "name": "LightWrathKa Flash Of Light",
+            "priority": 4,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "940",
+                    "yPosition": "565"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F9"
+                ]
+            }
+        },
+        "lightWrathKoFlashOfLight": {
+            "name": "LightWrathKo Flash Of Light",
+            "priority": 4,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "970",
+                    "yPosition": "565"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F9"
+                ]
+            }
+        },
+        "lightWrathNeFlashOfLight": {
+            "name": "LightWrathNe Flash Of Light",
+            "priority": 4,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1000",
+                    "yPosition": "565"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4",
+                    "F9"
+                ]
+            }
+        },
+        "lightWrathViFlashOfLight": {
+            "name": "LightWrathVi Flash Of Light",
+            "priority": 4,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "565"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F9"
+                ]
+            }
+        },
+        "lightWrathYkBestowFaith": {
+            "name": "LightWrathYk Bestow Faith",
+            "priority": 5,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "505"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "F7"
+                ]
+            }
+        },
+        "lightWrathYkHolyLight": {
+            "name": "LightWrathYk Holy Light",
+            "priority": 6,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "910",
+                    "yPosition": "535"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F1",
+                    "F8"
+                ]
+            }
+        },
+        "lightWrathKaHolyLight": {
+            "name": "LightWrathKa Holy Light",
+            "priority": 6,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "940",
+                    "yPosition": "535"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F2",
+                    "F8"
+                ]
+            }
+        },
+        "lightWrathKoHolyLight": {
+            "name": "LightWrathKo Holy Light",
+            "priority": 6,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "970",
+                    "yPosition": "535"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F3",
+                    "F8"
+                ]
+            }
+        },
+        "lightWrathNeHolyLight": {
+            "name": "LightWrathNe Holy Light",
+            "priority": 6,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1000",
+                    "yPosition": "535"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F4",
+                    "F8"
+                ]
+            }
+        },
+        "lightWrathViHolyLight": {
+            "name": "LightWrathVi Holy Light",
+            "priority": 6,
+            "triggers": {
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1030",
+                    "yPosition": "535"
+                }
+            },
+            "events": {
+                "keyAuto": [
+                    "F5",
+                    "F8"
+                ]
+            }
+        }
+    }
+}

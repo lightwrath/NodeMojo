@@ -1,0 +1,122 @@
+'use strict'
+import iohook from 'iohook';
+import robot from 'robotjs';
+
+import defineKeys from './defineKeys.json';
+import { initMacroConfig } from './configManager.mjs'
+import { events } from './eventsProcessor.mjs'
+
+iohook.start('keydown');
+iohook.start('keyup');
+
+let featureActive = false
+export async function macros(appConfig) {
+    if (featureActive) {
+        featureActive = !featureActive
+        iohook.off('keydown', await keyboardEvents.keyDown)
+        iohook.off('keyup', await keyboardEvents.keyUp)
+        delete appConfig.macros
+    } else {
+        featureActive = !featureActive
+        appConfig = initMacroConfig(appConfig)
+        keyboardEvents(appConfig)
+        pixelEvents(appConfig)
+    }
+}
+
+async function keyboardEvents(appConfig) {
+    async function keyDown(keyEvent) {
+        const definedKey = defineKeys[keyEvent.keycode]
+        let execNextStep = false
+        for (const macro of appConfig.macros) {
+            if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
+                macro.triggers.key.keyPressState = true
+                execNextStep = true
+            }
+        }
+        if (execNextStep) {
+            triggers(appConfig)
+        }
+    }
+    async function keyUp(keyEvent) {
+        const definedKey = defineKeys[keyEvent.keycode]
+        let execNextStep = false
+        for (const macro of appConfig.macros) {
+            if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
+                macro.triggers.key.keyPressState = false
+                execNextStep = true
+            }
+        }
+        if (execNextStep) {
+            triggers(appConfig)
+        }
+    }
+    keyboardEvents.keyDown = keyDown
+    keyboardEvents.keyUp = keyUp
+    iohook.on('keydown', keyDown)
+    iohook.on('keyup', keyUp)
+}
+
+async function pixelEvents(appConfig) {
+    function matchPixel(colour, x, y) { 
+        if (robot.getPixelColor(x, y) === colour) {
+           return true;
+        } else {
+           return false;
+        }
+    }
+    async function evalPixelStates(appConfig) {
+        let execNextStep = false
+        for (const macro of appConfig.macros) {
+            if (macro.triggers.pixel && matchPixel(
+                macro.triggers.pixel.colour,
+                macro.triggers.pixel.xPosition,
+                macro.triggers.pixel.yPosition)) 
+            {
+                macro.triggers.pixel.state = true
+                execNextStep = true
+            } else if (macro.triggers.pixel && macro.triggers.pixel.state === true) {
+                macro.triggers.pixel.state = false
+                execNextStep = true
+            }
+        }
+        if (execNextStep) {
+            triggers(appConfig)
+        }
+    }
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+    while (featureActive) {
+        await evalPixelStates(appConfig)
+        await sleep(250)
+    }
+}
+
+async function triggers(appConfig) {
+    function evalTriggers(triggers) {
+        if (triggers.key && !triggers.key.keyPressState) {
+            return false
+        }
+        if (triggers.pixel && !triggers.pixel.state) {
+            return false
+        }
+        return true
+    }
+    let priorityLevel = undefined
+    for (const macro of appConfig.macros) {
+        if (macro.priority > priorityLevel) {
+            break
+        }
+        if (evalTriggers(macro.triggers)) {
+            if (!macro.triggers.state) {
+                priorityLevel = macro.priority
+                macro.triggers.state = true
+                console.log(`${macro.name} triggered`)
+                events(macro.events, true)
+            }
+        } else if (macro.triggers.state) {
+            macro.triggers.state = false
+            console.log(`${macro.name} ended`)
+            events(macro.events, false)
+        }
+    }
+}
