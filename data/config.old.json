@@ -7,12 +7,12 @@
         }
     },
     "teams": {
-        "onlyLightWrathYk": {
-            "name": "Only LightWrathYk",
+        "only": {
+            "name": "only",
             "config": [
                 {
-                    "client": "woW1",
-                    "character": "lightWrathYk"
+                    "clientRef": "woW1",
+                    "characterRef": "lightWrathKa"
                 }
             ]
         },
@@ -182,7 +182,7 @@
     "hotkeys": {
         "interactWithTarget": {
             "name": "Interact With Target",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "4"
@@ -197,7 +197,7 @@
         },
         "mount": {
             "name": "Mount",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "KP_Subtract"
@@ -211,7 +211,7 @@
         },
         "follow": {
             "name": "Follow",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "2"
@@ -225,7 +225,7 @@
         },
         "moveBack": {
             "name": "Move Back",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "End"
@@ -239,7 +239,7 @@
         },
         "moveLeft": {
             "name": "moveLeft",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "Delete"
@@ -253,7 +253,7 @@
         },
         "moveRight": {
             "name": "moveRight",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "Page_Down"
@@ -267,7 +267,7 @@
         },
         "jump": {
             "name": "Jump",
-            "priority": 0,
+            "order": 0,
             "triggers": {
                 "key": {
                     "keyPress": "space"
@@ -281,7 +281,7 @@
         },
         "moonfireSingleTarget": {
             "name": "Moonfire Single Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -293,31 +293,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "lightWrathYkSingleTarget": {
             "name": "LightWrathYk Single Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "w"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F3",
-                    "F4",
-                    "F6"
-                ]
+                "keySync": ["F2", "F3", "F4", "F6"]
             }
         },
         "moonfireMultiTarget": {
             "name": "Moonfire Multi-Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "e"
@@ -329,30 +322,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "lightWrathYkMultiTarget": {
             "name": "LightWrathYk Multi-Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "e"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F4",
-                    "F6"
-                ]
+                "keySync": ["F3", "F4", "F6"]
             }
         },
         "trueshot": {
             "name": "Trueshot",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -364,14 +351,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "arcaneShot": {
             "name": "Arcane Shot",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -383,14 +368,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2"
-                ]
+                "keySync": ["F2"]
             }
         },
         "aimedShot": {
             "name": "Aimed Shot",
-            "priority": 3,
+            "order": 3,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -402,29 +385,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4"
-                ]
+                "keySync": ["F4"]
             }
         },
         "lightWrathKaSingleTarget": {
             "name": "LightWrathKa Single Target",
-            "priority": 4,
+            "order": 4,
             "triggers": {
                 "key": {
                     "keyPress": "w"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F6"
-                ]
+                "keySync": ["F5", "F6"]
             }
         },
         "multishotMultiTarget": {
             "name": "Multishot Multi-Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "e"
@@ -436,14 +414,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3"
-                ]
+                "keySync": ["F3"]
             }
         },
         "aimedShotMultiTarget": {
             "name": "Aimed Shot Multi-Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "e"
@@ -455,29 +431,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4"
-                ]
+                "keySync": ["F4"]
             }
         },
         "lightWrathKaMultiTarget": {
             "name": "LightWrathKa Multi-Target",
-            "priority": 3,
+            "order": 3,
             "triggers": {
                 "key": {
                     "keyPress": "e"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F5"
-                ]
+                "keySync": ["F3", "F5"]
             }
         },
         "flameShockSingleTarget": {
             "name": "Flame Shock Single Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -489,32 +460,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "lightWrathKoSingleTarget": {
-            "name": "LightWrath Single Target",
-            "priority": 2,
+            "name": "LightWrathKo Single Target",
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "w"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F3",
-                    "F4",
-                    "F5",
-                    "F6"
-                ]
+                "keySync": ["F2", "F3", "F4", "F5", "F6"]
             }
         },
         "flameShockMultiTarget": {
             "name": "Flame Shock Multi-Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "e"
@@ -526,32 +489,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "lightWrathKoMultiTarget": {
             "name": "LightWrathKo Multi-Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "e"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F3",
-                    "F4",
-                    "F5",
-                    "F7"
-                ]
+                "keySync": ["F2", "F3", "F4", "F5", "F7"]
             }
         },
         "evocation": {
             "name": "Evocation",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -560,14 +515,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1"
-                ]
+                "keySync": ["F1"]
             }
         },
         "arcaneBarrageSingleTarget": {
             "name": "Arcane Barrage Single Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "w"
@@ -579,29 +532,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3"
-                ]
+                "keySync": ["F3"]
             }
         },
         "arcaneBlastSingleTarget": {
             "name": "Arcane Blast Single Target",
-            "priority": 3,
+            "order": 3,
             "triggers": {
                 "key": {
                     "keyPress": "w"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F4"
-                ]
+                "keySync": ["F2", "F4"]
             }
         },
         "arcaneBarrageMultiTarget": {
             "name": "Arcane Barrage Multi-Target",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "key": {
                     "keyPress": "e"
@@ -613,29 +561,24 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3"
-                ]
+                "keySync": ["F3"]
             }
         },
         "arcaneBlastMultiTarget": {
             "name": "Arcane Blast Multi-Target",
-            "priority": 2,
+            "order": 2,
             "triggers": {
                 "key": {
                     "keyPress": "e"
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F4"
-                ]
+                "keySync": ["F2", "F4"]
             }
         },
         "lightWrathViBeaconOfLight": {
             "name": "LightWrathVi Beacon Of Light",
-            "priority": 1,
+            "order": 0,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -644,15 +587,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "1"
-                ]
+                "keySync": ["F1", "1"]
             }
         },
         "lightWrathViLightOfDawn": {
             "name": "LightWrathVi Light Of Dawn",
-            "priority": 1,
+            "order": 1,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -661,15 +601,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F11"
-                ]
+                "keySync": ["F5", "F11"]
             }
         },
         "holyPrism": {
             "name":  "Holy Prism",
-            "priority": 1,
+            "order": 2,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -678,15 +615,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F12"
-                ]
+                "keySync": ["F5", "F12"]
             }
         },
         "lightWrathYkHolyShock": {
             "name": "LightWrathYk Holy Shock",
-            "priority": 2,
+            "order": 3,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -695,15 +629,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "F6"
-                ]
+                "keySync": ["F1", "F6"]
             }
         },
         "lightWrathKaHolyShock": {
             "name": "LightWrathKa Holy Shock",
-            "priority": 2,
+            "order": 5,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -712,15 +643,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F6"
-                ]
+                "keySync": ["F2", "F6"]
             }
         },
         "lightWrathKoHolyShock": {
             "name": "LightWrathKo Holy Shock",
-            "priority": 2,
+            "order": 5,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -729,15 +657,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F6"
-                ]
+                "keySync": ["F3", "F6"]
             }
         },
         "lightWrathNeHolyShock": {
             "name": "LightWrathNe Holy Shock",
-            "priority": 2,
+            "order": 5,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -746,15 +671,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4",
-                    "F6"
-                ]
+                "keySync": ["F4", "F6"]
             }
         },
         "lightWrathViHolyShock": {
             "name": "LightWrathVi Holy Shock",
-            "priority": 2,
+            "order": 4,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -763,15 +685,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F6"
-                ]
+                "keySync": ["F5", "F6"]
             }
         },
         "lightWrathYkCleanse": {
             "name": "LightWrathYk Cleanse",
-            "priority": 3,
+            "order": 6,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -780,15 +699,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "F10"
-                ]
+                "keySync": ["F1", "F10"]
             }
         },
         "lightWrathKaCleanse": {
             "name": "LightWrathKa Cleanse",
-            "priority": 3,
+            "order": 6,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -797,15 +713,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F10"
-                ]
+                "keySync": ["F2", "F10"]
             }
         },
         "lightWrathKoCleanse": {
             "name": "LightWrathKo Cleanse",
-            "priority": 3,
+            "order": 6,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -814,15 +727,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F10"
-                ]
+                "keySync": ["F3", "F10"]
             }
         },
         "lightWrathNeCleanse": {
             "name": "LightWrathNe Cleanse",
-            "priority": 3,
+            "order": 6,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -831,15 +741,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4",
-                    "F10"
-                ]
+                "keySync": ["F4", "F10"]
             }
         },
         "lightWrathViCleanse": {
             "name": "LightWrathVi Cleanse",
-            "priority": 3,
+            "order": 6,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -848,15 +755,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F10"
-                ]
+                "keySync": ["F5", "F10"]
             }
         },
         "lightWrathYkFlashOfLight": {
             "name": "LightWrathYk Flash Of Light",
-            "priority": 4,
+            "order": 7,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -865,15 +769,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "F9"
-                ]
+                "keySync": ["F1", "F9"]
             }
         },
         "lightWrathKaFlashOfLight": {
             "name": "LightWrathKa Flash Of Light",
-            "priority": 4,
+            "order": 9,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -882,15 +783,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F9"
-                ]
+                "keySync": ["F2", "F9"]
             }
         },
         "lightWrathKoFlashOfLight": {
             "name": "LightWrathKo Flash Of Light",
-            "priority": 4,
+            "order": 9,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -899,15 +797,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F9"
-                ]
+                "keySync": ["F3", "F9"]
             }
         },
         "lightWrathNeFlashOfLight": {
             "name": "LightWrathNe Flash Of Light",
-            "priority": 4,
+            "order": 9,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -916,15 +811,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4",
-                    "F9"
-                ]
+                "keySync": ["F4", "F9"]
             }
         },
         "lightWrathViFlashOfLight": {
             "name": "LightWrathVi Flash Of Light",
-            "priority": 4,
+            "order": 8,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -933,15 +825,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F9"
-                ]
+                "keySync": ["F5", "F9"]
             }
         },
         "lightWrathYkBestowFaith": {
             "name": "LightWrathYk Bestow Faith",
-            "priority": 5,
+            "order": 10,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -950,15 +839,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "F7"
-                ]
+                "keySync": ["F1", "F7"]
             }
         },
         "lightWrathYkHolyLight": {
             "name": "LightWrathYk Holy Light",
-            "priority": 6,
+            "order": 11,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -967,15 +853,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F1",
-                    "F8"
-                ]
+                "keySync": ["F1", "F8"]
             }
         },
         "lightWrathKaHolyLight": {
             "name": "LightWrathKa Holy Light",
-            "priority": 6,
+            "order": 13,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -984,15 +867,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F2",
-                    "F8"
-                ]
+                "keySync": ["F2", "F8"]
             }
         },
         "lightWrathKoHolyLight": {
             "name": "LightWrathKo Holy Light",
-            "priority": 6,
+            "order": 13,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -1001,15 +881,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F3",
-                    "F8"
-                ]
+                "keySync": ["F3", "F8"]
             }
         },
         "lightWrathNeHolyLight": {
             "name": "LightWrathNe Holy Light",
-            "priority": 6,
+            "order": 13,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -1018,15 +895,12 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F4",
-                    "F8"
-                ]
+                "keySync": ["F4", "F8"]
             }
         },
         "lightWrathViHolyLight": {
             "name": "LightWrathVi Holy Light",
-            "priority": 6,
+            "order": 12,
             "triggers": {
                 "pixel": {
                     "colour": "00ff00",
@@ -1035,10 +909,91 @@
                 }
             },
             "events": {
-                "keyAuto": [
-                    "F5",
-                    "F8"
+                "keySync": ["F5", "F8"]
+            }
+        }
+    },
+    "healBots": {
+        "lightWrathViBot": {
+            "monitorBox": {
+                "topLeft": "",
+                "topRight": "",
+                "bottomRight": "",
+                "bottomLeft": "",
+                "boxTargetingList": [
+                    "F1",
+                    "F2",
+                    "F3",
+                    "F4",
+                    "F5"
                 ]
+            },
+            "abilities": {
+                "lightOfDawn": {
+                    "targetCount": 4,
+                    "triggers": {
+                        "triggerPercent": 75,
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "keySync": ["F11"]
+                    }
+                },
+                "holyPrism": {
+                    "targetCount": 3,
+                    "triggers": {
+                        "triggerPercent": 25,
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "keySync": ["F12"]
+                    }
+                },
+                "holyLight": {
+                    "targetCount": 1,
+                    "triggers": {
+                        "triggerPercent": 75
+                    },
+                    "events": {
+                        "keySync": ["F8"]
+                    }
+                },
+                "holyShock": {
+                    "targetCount": 1,
+                    "triggers": {
+                        "triggerPercent": 50,
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "keySync": ["F6"]
+                    }
+                },
+                "flashOfLight": {
+                    "targetCount": 1,
+                    "triggers": {
+                        "triggerPercent": 25,
+                        "pixel": {
+                            "colour": "00ff00",
+                            "xPosition": "970",
+                            "yPosition": "535"
+                        }
+                    },
+                    "events": {
+                        "keySync": ["F9"]
+                    }
+                }
             }
         }
     }

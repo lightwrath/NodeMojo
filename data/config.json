@@ -1,0 +1,361 @@
+{
+    "appConfig": {
+        "activeTeam": "lightdruid",
+        "toggleKeys": {
+            "keyBroadcaster": "Home",
+            "macros": "Pause"
+        }
+    },
+    "teams": {
+        "only": {
+            "name": "only",
+            "slots": [
+                {
+                    "clientRef": "woW1",
+                    "characterRef": "lightWrath"
+                }
+            ]
+        },
+        "lightdruid": {
+            "name": "LightDruid",
+            "slots": [
+                {
+                    "clientRef": "woW1",
+                    "slotName": "lightwrath",
+                    "macroRefs": [
+                        "invite",
+                        "interactWithTarget",
+                        "follow",
+                        "mount",
+                        "moveBack",
+                        "moveLeft",
+                        "jump"
+                    ]
+                },
+                {
+                    "clientRef": "woW2",
+                    "slotName": "lightdash",
+                    "macroRefs": [
+                        "invite",
+                        "interactWithTarget",
+                        "follow",
+                        "mount",
+                        "moveBack",
+                        "moveLeft",
+                        "jump"
+                    ]
+                },
+                {
+                    "clientRef": "woW3",
+                    "slotName": "lightsoothe",
+                    "macroRefs": [
+                        "invite",
+                        "interactWithTarget",
+                        "follow",
+                        "mount",
+                        "moveBack",
+                        "moveLeft",
+                        "jump"
+                    ]
+                },
+                {
+                    "clientRef": "woW4",
+                    "slotName": "lighttyphoon",
+                    "macroRefs": [
+                        "invite",
+                        "interactWithTarget",
+                        "follow",
+                        "mount",
+                        "moveBack",
+                        "moveLeft",
+                        "jump"
+                    ]
+                },
+                {
+                    "clientRef": "woW5",
+                    "slotName": "lightswipe",
+                    "macroRefs": [
+                        "invite",
+                        "interactWithTarget",
+                        "follow",
+                        "mount",
+                        "moveBack",
+                        "moveLeft",
+                        "jump"
+                    ]
+                }
+            ]
+        }
+    },
+    "clients": {
+        "woW1": {
+            "name": "WoW1",
+            "executable": "lutris lutris:rungameid/1",
+            "processName": "Wow.exe",
+            "xPosition": "1080",
+            "yPosition": "0"
+        },
+        "woW2": {
+            "name": "WoW2",
+            "executable": "lutris lutris:rungameid/2",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "120"
+        },
+        "woW3": {
+            "name": "WoW3",
+            "executable": "lutris lutris:rungameid/3",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "760"
+        },
+        "woW4": {
+            "name": "WoW4",
+            "executable": "lutris lutris:rungameid/4",
+            "processName": "Wow.exe",
+            "xPosition": "4920",
+            "yPosition": "1400"
+        },
+        "woW5": {
+            "name": "WoW5",
+            "executable": "lutris lutris:rungameid/5",
+            "processName": "Wow.exe",
+            "xPosition": "0",
+            "yPosition": "120"
+        }
+    },
+    "macros": {
+        "invite": {
+            "name": "Invite",
+            "order": 0,
+            "tirggers": {
+                "key": {
+                    "keyPress": "section"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "section"
+                ]
+            }
+        },
+        "interactWithTarget": {
+            "name": "Interact With Target",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "KP_9"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "KP_9",
+                    "t"
+                ]
+            }
+        },
+        "mount": {
+            "name": "Mount",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "KP_Subtract"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "KP_Subtract"
+                ]
+            }
+        },
+        "follow": {
+            "name": "Follow",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "KP_7"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "KP_7"
+                ]
+            }
+        },
+        "moveBack": {
+            "name": "Move Back",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "End"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Down"
+                ]
+            }
+        },
+        "moveLeft": {
+            "name": "moveLeft",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "Delete"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Left"
+                ]
+            }
+        },
+        "moveRight": {
+            "name": "moveRight",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "Page_Down"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "Right"
+                ]
+            }
+        },
+        "jump": {
+            "name": "Jump",
+            "order": 0,
+            "triggers": {
+                "key": {
+                    "keyPress": "space"
+                }
+            },
+            "events": {
+                "keySync": [
+                    "space"
+                ]
+            }
+        },
+        "moonfireSTWrath": {
+            "name": "Moonfire Single Target",
+            "order": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1105",
+                    "yPosition": "25"
+                }
+            },
+            "events": {
+                "keySync": ["F1"]
+            }
+        },
+        "wrathSTWrath": {
+            "name": "Wrath Single Target",
+            "order": 2,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1160",
+                    "yPosition": "25"
+                }
+            },
+            "events": {
+                "keySync": ["F2"]
+            }
+        },
+        "starfireSTWrath": {
+            "name": "Starfire Single Target",
+            "order": 3,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "1215",
+                    "yPosition": "25"
+                }
+            },
+            "events": {
+                "keySync": ["F3"]
+            }
+        },
+        "moonfireSTDash": {
+            "name": "Moonfire Single Target",
+            "order": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keySync": ["F1"]
+            }
+        },
+        "moonfireSTSoothe": {
+            "name": "Moonfire Single Target",
+            "order": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keySync": ["F1"]
+            }
+        },
+        "moonfireSTTyphoon": {
+            "name": "Moonfire Single Target",
+            "order": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keySync": ["F1"]
+            }
+        },
+        "moonfireSTSwipe": {
+            "name": "Moonfire Single Target",
+            "order": 1,
+            "triggers": {
+                "key": {
+                    "keyPress": "w"
+                },
+                "pixel": {
+                    "colour": "00ff00",
+                    "xPosition": "4805",
+                    "yPosition": "745"
+                }
+            },
+            "events": {
+                "keySync": ["F1"]
+            }
+        }
+    }
+}

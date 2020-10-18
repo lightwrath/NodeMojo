@@ -19,36 +19,41 @@ export async function macros(appConfig) {
     } else {
         featureActive = !featureActive
         appConfig = initMacroConfig(appConfig)
-        keyboardEvents(appConfig)
-        pixelEvents(appConfig)
+        console.log(appConfig)
+        keyboardEvents(appConfig.config)
+        pixelEvents(appConfig.config)
     }
 }
 
-async function keyboardEvents(appConfig) {
+async function keyboardEvents(slots) {
     async function keyDown(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        let execNextStep = false
-        for (const macro of appConfig.macros) {
-            if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
-                macro.triggers.key.keyPressState = true
-                execNextStep = true
+        for (let slotNum = 0; slotNum < slots.length; slotNum++) {
+            const slot = slots[slotNum]
+            let execNextStep = false
+            for (const macro of slot.hotkeys) {
+                if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
+                    macro.triggers.key.keyPressState = true
+                    execNextStep = true
+                }
             }
-        }
         if (execNextStep) {
-            triggers(appConfig)
+            triggers(macroList)
         }
     }
     async function keyUp(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        let execNextStep = false
-        for (const macro of appConfig.macros) {
-            if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
-                macro.triggers.key.keyPressState = false
-                execNextStep = true
+        for (let slotNum = 0; slotNum < slots.length; slotNum++) {
+            const slot = slots[slotNum]
+            let execNextStep = false
+            for (const macro of slot.hotkeys) {
+                if (macro.triggers.key && macro.triggers.key.keyPress === definedKey) {
+                    macro.triggers.key.keyPressState = false
+                    execNextStep = true
+                }
             }
-        }
         if (execNextStep) {
-            triggers(appConfig)
+            triggers(macroList)
         }
     }
     keyboardEvents.keyDown = keyDown
@@ -57,41 +62,45 @@ async function keyboardEvents(appConfig) {
     iohook.on('keyup', keyUp)
 }
 
-async function pixelEvents(appConfig) {
-    function matchPixel(colour, x, y) { 
+function pixelEvents(slots) {
+    async function matchPixel(colour, x, y) { 
         if (robot.getPixelColor(x, y) === colour) {
            return true;
         } else {
            return false;
         }
     }
-    async function evalPixelStates(appConfig) {
-        let execNextStep = false
-        for (const macro of appConfig.macros) {
-            if (macro.triggers.pixel && matchPixel(
-                macro.triggers.pixel.colour,
-                macro.triggers.pixel.xPosition,
-                macro.triggers.pixel.yPosition)) 
-            {
-                macro.triggers.pixel.state = true
-                execNextStep = true
-            } else if (macro.triggers.pixel && macro.triggers.pixel.state === true) {
-                macro.triggers.pixel.state = false
-                execNextStep = true
+    function evalPixelStates(slots) {
+        for (let slotNum = 0; slotNum < slots.length; slotNum++) {
+            const slot = slots[slotNum]
+            let execNextStep = false
+            for (const macro of slot.hotkeys) {
+                if (macro.triggers.pixel && await matchPixel(
+                    macro.triggers.pixel.colour,
+                    macro.triggers.pixel.xPosition,
+                    macro.triggers.pixel.yPosition)) 
+                {
+                    macro.triggers.pixel.state = true
+                    execNextStep = true
+                } else if (macro.triggers.pixel && macro.triggers.pixel.state === true) {
+                    macro.triggers.pixel.state = false
+                    execNextStep = true
+                }
+            }
+            if (execNextStep) {
+                triggers(macroList)
             }
         }
-        if (execNextStep) {
-            triggers(appConfig)
+    }
+    const timerId = setInterval(() => {
+        evalPixelStates(slots)
+        if (!featureActive) {
+            clearInterval(timerId)
         }
-    }
-    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-    while (featureActive) {
-        await evalPixelStates(appConfig)
-        await sleep(250)
-    }
+    }, 250)
 }
 
-async function triggers(appConfig) {
+async function triggers(macroList) {
     function evalTriggers(triggers) {
         if (triggers.key && !triggers.key.keyPressState) {
             return false
@@ -101,21 +110,16 @@ async function triggers(appConfig) {
         }
         return true
     }
-    let priorityLevel = undefined
-    for (const macro of appConfig.macros) {
-        if (macro.priority > priorityLevel) {
-            break
-        }
+    for (const macro of macroList) {
         if (evalTriggers(macro.triggers)) {
             if (!macro.triggers.state) {
-                priorityLevel = macro.priority
                 macro.triggers.state = true
-                console.log(`${macro.name} triggered`)
+                process.stdout.write(`${macro.name} triggered: `)
                 events(macro.events, true)
             }
         } else if (macro.triggers.state) {
             macro.triggers.state = false
-            console.log(`${macro.name} ended`)
+            process.stdout.write(`${macro.name} ended: `)
             events(macro.events, false)
         }
     }

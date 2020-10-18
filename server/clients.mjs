@@ -3,8 +3,8 @@ import { exec, execSync, spawn } from 'child_process';
 
 export function launchClients(appConfig) {
     let initalPIDs = [], currentPIDs = []
-    for (let client of appConfig.config) {
-        console.log(`Launching client ${client.clientName} for ${client.characterName}`)
+    for (let client of appConfig.slots) {
+        console.log(`Launching client ${client.clientName} for ${client.slotName}`)
         exec(client.executable);
         while(initalPIDs.length === currentPIDs.length) {
             try {
@@ -28,7 +28,7 @@ export function launchClients(appConfig) {
 }
 
 export function positionClients(appConfig) {
-    for (const client of appConfig.config) {
+    for (const client of appConfig.slots) {
         execSync(`xdotool windowmove $(xdotool selectwindow) ${client.windowXPosition} ${client.windowYPosition}`);
     }
 }

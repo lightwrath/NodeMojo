@@ -2,27 +2,27 @@
 import { exec } from 'child_process';
 
 async function keyDownEvent(keys, windowTargets) {
-    console.log(`Sending ${keys} key(s) down to ${windowTargets}`)
+    process.stdout.write(`Sending ${keys} key(s) down to ${windowTargets}.\n`)
     windowTargets.forEach(window => {
-        exec(`xdotool keydown --window ${window} ${keys}`)
+        exec(`xdotool keydown --window ${window} ${keys.join(' ')}`)
     })
 }
 
 async function keyUpEvent(keys, windowTargets) {
-    console.log(`Sending ${keys} key(s) up to ${windowTargets}`)
+    process.stdout.write(`Sending ${keys} key(s) up to ${windowTargets}.\n`)
     windowTargets.forEach(window => {
-        exec(`xdotool keyup --window ${window} ${keys}`)
+        exec(`xdotool keyup --window ${window} ${keys.join(' ')}`)
     })
 }
 
 async function keyAutoEvent(events) {
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
     while (events.keyAutoState === true) {
-        console.log(`Sending keys ${events.keyAuto} to ${events.windowID} automatically`)
+        console.log(`Sending keys ${events.keyAuto.keys} to ${events.windowID} automatically`)
         events.windowID.forEach(window => {
-            exec(`xdotool key --window ${window} ${events.keyAuto}`);
+            exec(`xdotool key --window ${window} ${events.keyAuto.keys.join(' ')}`);
         })
-        await sleep(250)
+        await sleep(events.keyAuto.timeout)
     }
 }
 
@@ -33,12 +33,7 @@ export async function events(events, state) {
         } else {
             keyUpEvent(events.keySync, events.windowID)
         }
-    } else if (events.keyAuto) {
-        if (state) {
-            events.keyAutoState = true
-            keyAutoEvent(events)
-        } else {
-            events.keyAutoState = false
-        }
+    } else {
+        console.log("Something else happened")
     }
 }

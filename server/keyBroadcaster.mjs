@@ -1,8 +1,13 @@
 'use strict'
 import iohook from 'iohook';
-import { exec } from 'child_process';
 
-import defineKeys from './defineKeys.json';
+import appConfig from './main.mjs'
+
+const allTargets = []
+appConfig.slots.forEach(slot => slot.windowID.push(allTarget))
+
+console.log(allTargets)
+
 
 function convertKeyEvent(keyEvent) {
     let keyString = [];
@@ -21,7 +26,7 @@ function convertKeyEvent(keyEvent) {
 }
 
 export default function keyboardcaster (appConfig) {
-    let keyBoardcaster = false
+    /*let keyBoardcaster = false
     iohook.on('keydown', function(keyEvent) {
         if (keyBoardcaster) {
             const keyString = convertKeyEvent(keyEvent);
@@ -50,4 +55,5 @@ export default function keyboardcaster (appConfig) {
     })
     iohook.start('keydown');
     iohook.start('keyup');
+    */
 }
