@@ -1,24 +1,21 @@
 'use strict'
 import iohook from 'iohook'
 
-import { toggler } from './toggler.mjs'
-import keyBroadcaster from './keyBroadcaster.mjs'
 import defineKeys from './defineKeys.json'
 
-export default function keyboard() {
-    keyboardMonitor()
+export default function keyboard(eventHub) {
+    keyboardMonitor(eventHub)
 
 }
 
-function keyboardMonitor() {
+function keyboardMonitor(eventHub) {
     iohook.on('keydown', function(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        toggler(definedKey)
-        keyBroadcaster(parseKeyObject(keyEvent, definedKey))
+        eventHub('key', parseKeyObject(keyEvent, definedKey))
     })
     iohook.on('keyup', function(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        keyBroadcaster(parseKeyObject(keyEvent, definedKey))
+        eventHub('key', parseKeyObject(keyEvent, definedKey))
     })
     iohook.start('keydown');
     iohook.start('keyup');

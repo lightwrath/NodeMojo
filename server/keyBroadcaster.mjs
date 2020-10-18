@@ -1,13 +1,13 @@
 'use strict'
 import iohook from 'iohook';
 
-import appConfig from './main.mjs'
+/*import appConfig from './main.mjs'
 
 const allTargets = []
 appConfig.slots.forEach(slot => slot.windowID.push(allTarget))
 
 console.log(allTargets)
-
+*/
 
 function convertKeyEvent(keyEvent) {
     let keyString = [];

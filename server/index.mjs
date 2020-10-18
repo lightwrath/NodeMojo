@@ -1,13 +1,13 @@
 'use strict'
-
-import { launchClients, positionClients } from './clients.mjs'
-//import keyboardBroadcaster from './keyboardBroadcaster.mjs'
-import keyboard from './keyboard.mjs'
-import { initConfig } from './configManager.mjs'
-
 import ioHook from 'iohook'
 import robot from 'robotjs'
+import EventEmitter from 'events'
 
+import { initAppConfig } from './appConfig.mjs'
+import keyboard from './keyboard.mjs'
+import  { toggler } from './toggler.mjs'
+
+import { launchClients, positionClients } from './clients.mjs'
 
 console.log(process.argv)
 if (process.argv[2] === "pixelcheck") {
@@ -26,15 +26,11 @@ else if (process.argv[2] === "keycheck") {
         console.log(event);
     });
     ioHook.start();
-} else { //Main App
-    let appConfig = initConfig()
-    appConfig = launchClients(appConfig)
-    positionClients(appConfig)
-    console.log(appConfig)
 }
 
-export default appConfig
-
-if (appConfig) {
-    keyboard()
-}
+initAppConfig()
+const eventHub = new EventEmitter
+keyboard(eventHub)
+launchClients()
+positionClients()
+toggler(eventHub)

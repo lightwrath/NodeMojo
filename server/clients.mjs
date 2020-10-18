@@ -1,7 +1,9 @@
 'use strict'
 import { exec, execSync, spawn } from 'child_process';
 
-export function launchClients(appConfig) {
+import { appConfig, updateConfig } from './appConfig.mjs'
+
+export function launchClients() {
     let initalPIDs = [], currentPIDs = []
     for (let client of appConfig.slots) {
         console.log(`Launching client ${client.clientName} for ${client.slotName}`)
@@ -24,10 +26,10 @@ export function launchClients(appConfig) {
         client.windowID = returnedWindowIDs.split('\n')[0]
         client.clientPID = pid
     }
-    return appConfig
+    updateConfig(appConfig)
 }
 
-export function positionClients(appConfig) {
+export function positionClients() {
     for (const client of appConfig.slots) {
         execSync(`xdotool windowmove $(xdotool selectwindow) ${client.windowXPosition} ${client.windowYPosition}`);
     }
