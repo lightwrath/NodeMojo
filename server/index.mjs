@@ -6,7 +6,7 @@ import events from 'events'
 import { initAppConfig } from './appConfig.mjs'
 import keyboard from './keyboard.mjs'
 import { toggler } from './toggler.mjs'
-import sendEvents from './eventsProcessor.mjs'
+import sendKeys from './sendKeys.mjs'
 
 import { launchClients, positionClients } from './clients.mjs'
 
@@ -35,4 +35,4 @@ keyboard(eventHub)
 toggler(eventHub)
 launchClients()
 positionClients()
-sendEvents(eventHub)
+sendKeys(eventHub)

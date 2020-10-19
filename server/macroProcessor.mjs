@@ -4,7 +4,7 @@ import robot from 'robotjs';
 
 import defineKeys from './defineKeys.json';
 import { initMacroConfig } from './configManager.mjs'
-import { events } from './eventsProcessor.mjs'
+import { events } from './sendKeys.mjs'
 
 iohook.start('keydown');
 iohook.start('keyup');
