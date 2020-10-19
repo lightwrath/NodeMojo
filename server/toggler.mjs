@@ -1,7 +1,7 @@
 'use strict'
 
-import appConfig from './appConfig.mjs'
-import keyBoardcaster from './keyBroadcaster.mjs'
+import { appConfig } from './appConfig.mjs'
+import keyBroadcaster from './keyBroadcaster.mjs'
 
 export let featureStates = {
     keyBroadcaster: false,
@@ -17,7 +17,7 @@ export function toggler(eventHub) {
 
         if (key.key === toggleKeys.keyBroadcaster) {
             featureStates.keyBroadcaster = !featureStates.keyBroadcaster
-            keyBoardcaster()
+            keyBroadcaster(eventHub)
             console.log(`Key broadcaster is now ${featureStates.keyBroadcaster ? "enabled" : "disabled"}`)
         } else if (key.key === toggleKeys.macros) {
             featureStates.macros = !featureStates.macros

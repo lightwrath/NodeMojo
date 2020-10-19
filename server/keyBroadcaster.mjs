@@ -1,13 +1,7 @@
 'use strict'
-import iohook from 'iohook';
 
-/*import appConfig from './main.mjs'
-
-const allTargets = []
-appConfig.slots.forEach(slot => slot.windowID.push(allTarget))
-
-console.log(allTargets)
-*/
+import { appConfig } from './appConfig.mjs'
+import { featureStates } from './toggler.mjs'
 
 function convertKeyEvent(keyEvent) {
     let keyString = [];
@@ -25,7 +19,24 @@ function convertKeyEvent(keyEvent) {
     return keyString.join('+')
 }
 
-export default function keyboardcaster (appConfig) {
+let broadcasterFunction
+
+export default function keyBroadcaster(eventHub) {
+    const windowTargets = appConfig.slots.map(slot => slot.windowID)
+    function broadcastEvent(key) {
+        console.log(`Broadcasting ${key.shiftKey ? "SHIFT+" : ""}${key.altKey ? "ALT+" : ""}${key.ctrlKey ? "CTRL+" : ""}${key.key} ${key.state ? "key down" : "key up"}.`)
+        windowTargets.forEach(windowID => {
+            key.windowID = windowID
+            eventHub.emit('sendKey', key)
+        })
+    }
+    if (featureStates.keyBroadcaster) {
+        eventHub.on('key', broadcastEvent)
+        broadcasterFunction = broadcastEvent
+    } else {
+        eventHub.off('key', broadcasterFunction)
+    }
+    
     /*let keyBoardcaster = false
     iohook.on('keydown', function(keyEvent) {
         if (keyBoardcaster) {

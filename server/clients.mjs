@@ -1,7 +1,7 @@
 'use strict'
 import { exec, execSync, spawn } from 'child_process';
 
-import { appConfig, updateConfig } from './appConfig.mjs'
+import { appConfig, postConfig } from './appConfig.mjs'
 
 export function launchClients() {
     let initalPIDs = [], currentPIDs = []
@@ -26,7 +26,7 @@ export function launchClients() {
         client.windowID = returnedWindowIDs.split('\n')[0]
         client.clientPID = pid
     }
-    updateConfig(appConfig)
+    postConfig(appConfig)
 }
 
 export function positionClients() {

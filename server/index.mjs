@@ -1,11 +1,12 @@
 'use strict'
 import ioHook from 'iohook'
 import robot from 'robotjs'
-import EventEmitter from 'events'
+import events from 'events'
 
 import { initAppConfig } from './appConfig.mjs'
 import keyboard from './keyboard.mjs'
-import  { toggler } from './toggler.mjs'
+import { toggler } from './toggler.mjs'
+import sendEvents from './eventsProcessor.mjs'
 
 import { launchClients, positionClients } from './clients.mjs'
 
@@ -29,8 +30,9 @@ else if (process.argv[2] === "keycheck") {
 }
 
 initAppConfig()
-const eventHub = new EventEmitter
+const eventHub = new events.EventEmitter()
 keyboard(eventHub)
+toggler(eventHub)
 launchClients()
 positionClients()
-toggler(eventHub)
+sendEvents(eventHub)

@@ -3,7 +3,8 @@
         "activeTeam": "lightdruid",
         "toggleKeys": {
             "keyBroadcaster": "Home",
-            "macros": "Pause"
+            "macros": "Pause",
+            "printConfig": "End"
         }
     },
     "teams": {

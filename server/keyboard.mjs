@@ -11,11 +11,11 @@ export default function keyboard(eventHub) {
 function keyboardMonitor(eventHub) {
     iohook.on('keydown', function(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        eventHub('key', parseKeyObject(keyEvent, definedKey))
+        eventHub.emit('key', parseKeyObject(keyEvent, definedKey))
     })
     iohook.on('keyup', function(keyEvent) {
         const definedKey = defineKeys[keyEvent.keycode]
-        eventHub('key', parseKeyObject(keyEvent, definedKey))
+        eventHub.emit('key', parseKeyObject(keyEvent, definedKey))
     })
     iohook.start('keydown');
     iohook.start('keyup');

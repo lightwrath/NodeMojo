@@ -1,7 +1,13 @@
 'use strict'
 import { exec } from 'child_process';
 
-async function keyDownEvent(keys, windowTargets) {
+export default function sendEvents(eventHub) {
+    eventHub.on('sendKey', (key) => {
+        //console.log(key)
+    })
+}
+
+/*async function keyDownEvent(keys, windowTargets) {
     process.stdout.write(`Sending ${keys} key(s) down to ${windowTargets}.\n`)
     windowTargets.forEach(window => {
         exec(`xdotool keydown --window ${window} ${keys.join(' ')}`)
@@ -36,4 +42,4 @@ export async function events(events, state) {
     } else {
         console.log("Something else happened")
     }
-}
+}*/
