@@ -17,6 +17,7 @@ export default function sendKeys(eventHub) {
     })
 }
 
+/*
 function convertKeyEvent(keyEvent) {
     let keyString = [];
     const key = defineKeys[keyEvent.keycode];
@@ -33,7 +34,7 @@ function convertKeyEvent(keyEvent) {
     return keyString.join('+')
 }
 
-/*async function keyDownEvent(keys, windowTargets) {
+async function keyDownEvent(keys, windowTargets) {
     process.stdout.write(`Sending ${keys} key(s) down to ${windowTargets}.\n`)
     windowTargets.forEach(window => {
         exec(`xdotool keydown --window ${window} ${keys.join(' ')}`)

@@ -5,6 +5,7 @@ import events from 'events'
 
 import { initAppConfig } from './appConfig.mjs'
 import keyboard from './keyboard.mjs'
+import { pixels } from './pixels.mjs'
 import { toggler } from './toggler.mjs'
 import sendKeys from './sendKeys.mjs'
 
@@ -32,6 +33,7 @@ else if (process.argv[2] === "keycheck") {
 initAppConfig()
 const eventHub = new events.EventEmitter()
 keyboard(eventHub)
+pixels(eventHub)
 toggler(eventHub)
 launchClients()
 positionClients()

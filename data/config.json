@@ -128,10 +128,9 @@
     "macros": {
         "invite": {
             "name": "Invite",
-            "order": 0,
-            "tirggers": {
-                "key": {
-                    "keyPress": "section"
+            "triggers": {
+                "keyboard": {
+                    "key": "section"
                 }
             },
             "events": {
@@ -142,10 +141,9 @@
         },
         "interactWithTarget": {
             "name": "Interact With Target",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "KP_9"
+                "keyboard": {
+                    "key": "KP_9"
                 }
             },
             "events": {
@@ -157,10 +155,9 @@
         },
         "mount": {
             "name": "Mount",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "KP_Subtract"
+                "keyboard": {
+                    "key": "KP_Subtract"
                 }
             },
             "events": {
@@ -171,10 +168,9 @@
         },
         "follow": {
             "name": "Follow",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "KP_7"
+                "keyboard": {
+                    "key": "KP_7"
                 }
             },
             "events": {
@@ -185,10 +181,9 @@
         },
         "moveBack": {
             "name": "Move Back",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "End"
+                "keyboard": {
+                    "key": "End"
                 }
             },
             "events": {
@@ -199,10 +194,9 @@
         },
         "moveLeft": {
             "name": "moveLeft",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "Delete"
+                "keyboard": {
+                    "key": "Delete"
                 }
             },
             "events": {
@@ -213,10 +207,9 @@
         },
         "moveRight": {
             "name": "moveRight",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "Page_Down"
+                "keyboard": {
+                    "key": "Page_Down"
                 }
             },
             "events": {
@@ -227,10 +220,9 @@
         },
         "jump": {
             "name": "Jump",
-            "order": 0,
             "triggers": {
-                "key": {
-                    "keyPress": "space"
+                "keyboard": {
+                    "key": "space"
                 }
             },
             "events": {
@@ -241,10 +233,9 @@
         },
         "moonfireSTWrath": {
             "name": "Moonfire Single Target",
-            "order": 1,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -258,10 +249,9 @@
         },
         "wrathSTWrath": {
             "name": "Wrath Single Target",
-            "order": 2,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -275,10 +265,9 @@
         },
         "starfireSTWrath": {
             "name": "Starfire Single Target",
-            "order": 3,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -292,10 +281,9 @@
         },
         "moonfireSTDash": {
             "name": "Moonfire Single Target",
-            "order": 1,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -309,10 +297,9 @@
         },
         "moonfireSTSoothe": {
             "name": "Moonfire Single Target",
-            "order": 1,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -326,10 +313,9 @@
         },
         "moonfireSTTyphoon": {
             "name": "Moonfire Single Target",
-            "order": 1,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",
@@ -343,10 +329,9 @@
         },
         "moonfireSTSwipe": {
             "name": "Moonfire Single Target",
-            "order": 1,
             "triggers": {
-                "key": {
-                    "keyPress": "w"
+                "keyboard": {
+                    "key": "w"
                 },
                 "pixel": {
                     "colour": "00ff00",

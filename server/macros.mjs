@@ -1,14 +1,97 @@
 'use strict'
-import iohook from 'iohook';
-import robot from 'robotjs';
+import { appConfig } from './appConfig.mjs'
+import { addPixel, clearPixels } from './pixels.mjs'
+import { featureStates } from './toggler.mjs'
 
-import defineKeys from './defineKeys.json';
-import { initMacroConfig } from './configManager.mjs'
-import { events } from './sendKeys.mjs'
+function pushPixels() {
+    for (const slot of appConfig.slots) {
+        slot.macros.forEach(macro => {
+            if (macro.triggers.pixel) {
+                const pixel = {
+                    color: macro.triggers.pixel.color,
+                    x: macro.triggers.pixel.xPosition,
+                    y: yPosition,
+                    slotName: slot.slotName,
+                    macro: macro.name
+                }
+                addPixel(pixel)
+            }
+        })
+    }
+}
 
-iohook.start('keydown');
-iohook.start('keyup');
+async function evaluateTriggersFor(eventHub, slot) {
+    function evalTriggers(triggers) {
+        if (triggers.keyboard && !triggers.keyboard.state) {
+            return false
+        }
+        if (triggers.pixel && !triggers.pixel.state) {
+            return false
+        }
+        return true
+    }
+    const macroToTrigger = slot.macros.find(macro => {
+        const triggerState = evalTriggers(macro.triggers)
+        if (macro.triggers.state != triggerState) {
+            macro.triggers.state = triggerState
+            return true
+        }
+    })
+    if (macroToTrigger) {
+        if (macroToTrigger.triggers.state) {
+            console.log(`${macroToTrigger.name}: Sending ${macroToTrigger.events.keySync.concat()} to ${slot.slotName}`)
+        }
+        eventHub.emit('sendKey', {
+            key: macroToTrigger.events.keySync, 
+            windowID: slot.windowID,
+            state: macroToTrigger.triggers.state 
+        })
+    }
+}
 
+let keyListenerFuncRef = null
+let pixelListenerFuncRef = null
+
+export default function macros(eventHub) {
+    function keyListener(key) {
+        for (const slot of appConfig.slots) {
+            let keyMatchFound = false
+            slot.macros.forEach(macro => {
+                if (
+                macro.triggers.keyboard.key === key.key &&
+                key.state) {
+                    macro.triggers.keyboard.state = true
+                    keyMatchFound = true
+                } else if (
+                macro.triggers.keyboard.key === key.key &&
+                !key.state) {
+                    macro.triggers.keyboard.state = false
+                    keyMatchFound = true
+                }
+            })
+            if (keyMatchFound) {
+                evaluateTriggersFor(eventHub, slot)
+            }
+        }
+    }
+    
+    function pixelListener(pixel) {
+        console.log(pixel)
+    }
+    if (featureStates.macros) {
+        pushPixels()
+        keyListenerFuncRef = keyListener
+        pixelListenerFuncRef = pixelListener
+        eventHub.on('key', keyListener)
+        eventHub.on('pixel', pixelListener)
+    } else {
+        clearPixels()
+        eventHub.off('key', keyListenerFuncRef)
+        eventHub.off('key', pixelListenerFuncRef)
+    }
+}
+
+/*
 let featureActive = false
 export async function macros(appConfig) {
     if (featureActive) {
@@ -123,4 +206,4 @@ async function triggers(macroList) {
             events(macro.events, false)
         }
     }
-}
+}*/

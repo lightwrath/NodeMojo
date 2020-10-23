@@ -2,6 +2,7 @@
 
 import { appConfig } from './appConfig.mjs'
 import keyBroadcaster from './keyBroadcaster.mjs'
+import macros from './macros.mjs'
 
 export let featureStates = {
     keyBroadcaster: false,
@@ -11,7 +12,7 @@ export let featureStates = {
 export function toggler(eventHub) {
     const toggleKeys = appConfig.toggleKeys
     eventHub.on('key', (key) => {
-        if (!key.state) {
+        if (key.state) {
             return 
         }
 
@@ -21,6 +22,7 @@ export function toggler(eventHub) {
             console.log(`Key broadcaster is now ${featureStates.keyBroadcaster ? "enabled" : "disabled"}`)
         } else if (key.key === toggleKeys.macros) {
             featureStates.macros = !featureStates.macros
+            macros(eventHub)
             console.log(`Macros are now ${featureStates.macros ? "enabled" : "disabled"}`)
         } else if (key.key === toggleKeys.printConfig) {
             console.log(appConfig)
